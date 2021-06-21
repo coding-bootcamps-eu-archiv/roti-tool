@@ -1,10 +1,10 @@
 <template>
   <header>
-    <div id="nav">
+    <nav id="nav">
       <router-link to="/">Index</router-link> |
       <router-link to="/new">Neuer Eintrag</router-link> |
       <router-link to="/team">Team</router-link>
-    </div>
+    </nav>
     <h1>ROTI TOOL</h1>
   </header>
   <router-view />
