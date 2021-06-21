@@ -5,6 +5,7 @@
       <router-link to="/new">Neuer Eintrag</router-link> |
       <router-link to="/team">Team</router-link>
     </div>
+    <h1>ROTI TOOL</h1>
   </header>
   <router-view />
   <footer>Copyright XYZ</footer>
