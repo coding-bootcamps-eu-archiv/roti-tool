@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Index from "../views/Index.vue";
+import Team from "../views/Team.vue";
 
 const routes = [
   {
@@ -8,9 +9,9 @@ const routes = [
     component: Index,
   },
   {
-    path: "/about",
-    name: "About",
-    component: About,
+    path: "/team",
+    name: "Team",
+    component: Team,
   }
 ];
 
