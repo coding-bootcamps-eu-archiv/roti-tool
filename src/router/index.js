@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Index from "../views/Index.vue";
 import Team from "../views/Team.vue";
-import New from "../views/New.vue";
+import NewRoti from "../views/NewRoti.vue";
 
 const routes = [
   {
@@ -17,8 +17,8 @@ const routes = [
   {
     path: "/new",
     name: "New",
-    component: New,
-  }
+    component: NewRoti,
+  },
 ];
 
 const router = createRouter({

@@ -1,10 +1,13 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Index</router-link> |
-    <router-link to="/new">Neuer Eintrag</router-link> |
-    <router-link to="/team">Team</router-link>
-  </div>
+  <header>
+    <div id="nav">
+      <router-link to="/">Index</router-link> |
+      <router-link to="/new">Neuer Eintrag</router-link> |
+      <router-link to="/team">Team</router-link>
+    </div>
+  </header>
   <router-view />
+  <footer>Copyright XYZ</footer>
 </template>
 
 <style lang="scss">
