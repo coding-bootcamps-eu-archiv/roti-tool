@@ -1,25 +1,29 @@
-<template></template
+<template>
+  <li>{{ name }}</li>
+</template>
 
 <script>
-    emport default {
-        name: "TeamMember",
-        props: {
-            foto: {
-                type: Image
+export default {
+  name: "TeamMember",
+  props: {
+    foto: {
+      type: Image,
+    },
 
-            }
-            bullet1: {
-                type: String
-
-            }
-            bullet2: {
-                type: String
-            }
-            bullet3: {
-                type: String
-            }
-        }
-    }
+    name: {
+      type: String,
+    },
+    bullet1: {
+      type: String,
+    },
+    bullet2: {
+      type: String,
+    },
+    bullet3: {
+      type: String,
+    },
+  },
+};
 </script>
 
 <style></style>
