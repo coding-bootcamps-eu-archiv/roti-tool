@@ -1,7 +1,13 @@
 <template>
-  <div class="team">
-    <h1>This is an team page</h1>
-  </div>
+  <header class="team">
+    <h1>Wer hat's gebaut und warum?</h1>
+  </header>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio culpa
+    rem eligendi, temporibus consequuntur itaque veritatis? Nam, assumenda
+    repudiandae a ut placeat aliquam accusantium ad hic fugit temporibus vero
+    dolorum.
+  </p>
   <ul>
     <TeamMember v-for="member in members" :key="member.name" v-bind="member" />
   </ul>
