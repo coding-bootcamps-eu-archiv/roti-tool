@@ -23,6 +23,10 @@ export default {
 <style scoped>
 @media screen and (min-width: 768px) {
   .container {
+    display: grid;
+    text-align: left;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
     margin-left: 15rem;
     margin-right: 15rem;
   }
@@ -30,8 +34,8 @@ export default {
 
 .container {
   display: grid;
-  text-align: left;
-  grid-template-columns: 1fr 2fr;
+  text-align: center;
+
   grid-gap: 20px;
 }
 
@@ -39,5 +43,8 @@ export default {
   height: 200px;
   width: 300px;
   border-radius: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

@@ -8,11 +8,11 @@
     Fräulein. Die frivol Übeltäter stibitzen. Das hold Scharmützel anschwärzen.
     Die dufte Freikörperkultur jauchzen. Mein lieber Scholli!
   </p>
-  <button class="rotiBtn" @click="$router.push('/NewRoti')">
+  <button class="rotiBtn" @click="$router.push('/new')">
     Klick fürs ROTI 🦄
   </button>
   <br />
-  <article>
+  <article class="instruction-container">
     <h2>Anleitung</h2>
     <div>
       <InstructionCard
@@ -45,7 +45,7 @@ export default {
 </script>
 
 <style scoped>
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 915px) {
   p {
     margin-left: 15rem;
     margin-right: 15rem;
@@ -59,5 +59,9 @@ export default {
   font-size: 1rem;
   font-weight: bold;
   border-radius: 15px;
+}
+
+.instruction-container {
+  margin-top: 5rem;
 }
 </style>
