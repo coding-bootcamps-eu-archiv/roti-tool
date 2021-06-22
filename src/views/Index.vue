@@ -8,8 +8,8 @@
     Fräulein. Die frivol Übeltäter stibitzen. Das hold Scharmützel anschwärzen.
     Die dufte Freikörperkultur jauchzen. Mein lieber Scholli!
   </p>
-  <button>
-    <router-link to="/NewRoti" tag="button">Klick fürs ROTI</router-link>
+  <button class="rotiBtn" @click="$router.push('/NewRoti')">
+    Klick fürs ROTI 🦄
   </button>
   <br />
   <article>
@@ -43,3 +43,21 @@ export default {
   components: { InstructionCard },
 };
 </script>
+
+<style scoped>
+@media screen and (min-width: 768px) {
+  p {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+}
+
+.rotiBtn {
+  padding: 1rem;
+  background-color: #6a1cc3;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 15px;
+}
+</style>

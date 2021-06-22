@@ -1,9 +1,11 @@
 <template>
-  <div>
-    <h3>{{ headline }}</h3>
-    <img :src="picture_src" />
+  <div class="container">
+    <img class="instructionImage" :src="picture_src" />
+    <section>
+      <h3>{{ headline }}</h3>
+      <p>{{ description }}</p>
+    </section>
     <div class="pic_sub">{{ pic_desc }}</div>
-    <p>{{ description }}</p>
   </div>
 </template>
 <script>
@@ -17,3 +19,25 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@media screen and (min-width: 768px) {
+  .container {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+}
+
+.container {
+  display: grid;
+  text-align: left;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 20px;
+}
+
+.instructionImage {
+  height: 200px;
+  width: 300px;
+  border-radius: 30px;
+}
+</style>
