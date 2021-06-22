@@ -8,7 +8,7 @@
     Fräulein. Die frivol Übeltäter stibitzen. Das hold Scharmützel anschwärzen.
     Die dufte Freikörperkultur jauchzen. Mein lieber Scholli!
   </p>
-  <button class="rotiBtn" @click="$router.push('/new')">
+  <button class="rotiBtn" tabindex="100" @click="$router.push('/new')">
     Klick fürs ROTI 🦄
   </button>
   <br />
