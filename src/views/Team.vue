@@ -1,6 +1,6 @@
 <template>
   <header class="team">
-    <h1>Wer hat's gebaut und warum?</h1>
+    <h2>Wer hat's gebaut und warum?</h2>
   </header>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio culpa
