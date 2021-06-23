@@ -3,9 +3,9 @@
     <img class="picture" alt="Bild" :src="foto_url" />
     <div class="textContent">
       <li class="name">{{ name }}</li>
-      <li>{{ bullet1 }}</li>
-      <li>{{ bullet2 }}</li>
-      <li>{{ bullet3 }}</li>
+      <li data-test="bullet">{{ bullet1 }}</li>
+      <li data-test="bullet">{{ bullet2 }}</li>
+      <li data-test="bullet">{{ bullet3 }}</li>
       <li class="twitter">
         <a :href="twitter" target="_blank">
           <img
