@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <img class="instructionImage" :src="picture_src" />
+    <img class="instructionImage" :src="picture_src" :alt="picture_alt" />
     <section>
       <h3>{{ headline }}</h3>
       <p>{{ description }}</p>
@@ -15,7 +15,7 @@ export default {
     headline: String,
     description: String,
     picture_src: String,
-    pic_desc: String,
+    picture_alt: String,
   },
 };
 </script>
