@@ -8,7 +8,7 @@
     repudiandae a ut placeat aliquam accusantium ad hic fugit temporibus vero
     dolorum.
   </p>
-  <ul>
+  <ul class="list">
     <TeamMember v-for="member in members" :key="member.name" v-bind="member" />
   </ul>
 </template>
@@ -27,3 +27,8 @@ export default {
   },
 };
 </script>
+<style>
+.list {
+  all: unset;
+}
+</style>
