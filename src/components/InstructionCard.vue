@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @media screen and (min-width: 768px) {
   .container {
     display: grid;

@@ -47,7 +47,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @media screen and (min-width: 915px) {
   p {
     margin-left: 15rem;
