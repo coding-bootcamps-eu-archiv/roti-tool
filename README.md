@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4e45198c-fc0b-4dff-b155-ff32cfbc4d57/deploy-status)](https://app.netlify.com/sites/roti-tool/deploys)
+
 # roti-tool
 
 ## Project setup
