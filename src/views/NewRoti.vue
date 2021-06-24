@@ -2,20 +2,18 @@
   <h2>Neuer ROTI Eintrag</h2>
 
   <form class="input-roti-form">
-    <select name="thema" id="thema" class="dropdown-items" required>
+    <select name="topics" id="topics" class="dropdown-items" required>
       <option value=" ">--Thema--</option>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option v-for="topics in topics" :key="topics.id" value="topic">
+        {{ topics.description }}
+      </option>
     </select>
 
     <select name="trainer" id="trainer" class="dropdown-items">
       <option value=" ">--Trainer--</option>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option value="trainer" v-for="trainer in trainer" :key="trainer.id">
+        {{ trainer.name }}
+      </option>
     </select>
 
     <select
@@ -24,10 +22,13 @@
       class="dropdown-items"
     >
       <option value=" ">--Teaching Assistent--</option>
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+      <option
+        value="teachingAssistent"
+        v-for="teachingAssistent in teachingAssistent"
+        :key="teachingAssistent.id"
+      >
+        {{ teachingAssistent.name }}
+      </option>
     </select>
 
     <input
@@ -71,6 +72,26 @@
     <button class="full-width">Absenden</button>
   </form>
 </template>
+
+<script>
+import {
+  topics,
+  trainer,
+  teachingAssistent,
+} from "@/components/dropdownContent.js";
+
+export default {
+  name: "NewRoti",
+  components: {},
+  data: () => {
+    return {
+      topics,
+      trainer,
+      teachingAssistent,
+    };
+  },
+};
+</script>
 
 <style>
 .input-roti-form {
