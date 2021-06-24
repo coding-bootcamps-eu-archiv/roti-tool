@@ -6,7 +6,7 @@
 
 The main branch is automatically deployed as production at [https://roti-tool.netlify.app](https://roti-tool.netlify.app).
 
-The development branch is automatically deployed at [https://development--roti-tool.netlify.app/#/](https://development--roti-tool.netlify.app/#/).
+The development branch is automatically deployed at [https://development--roti-tool.netlify.app](https://development--roti-tool.netlify.app).
 
 The Netlify GitHub app will automatically create a review-app for each Pull Request (visible in the PR itself).
 
