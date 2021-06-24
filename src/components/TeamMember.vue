@@ -1,5 +1,5 @@
 <template>
-  <div class="member">
+  <article class="member">
     <img class="picture" alt="Bild" :src="foto_url" />
     <div class="textContent">
       <li class="name">{{ name }}</li>
@@ -17,7 +17,7 @@
         </a>
       </li>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>
