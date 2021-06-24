@@ -7,6 +7,17 @@ date
 rotiValue
 rotiText
 */
+import firebase from "firebase/app";
+
+import * as admin from "firebase-admin";
+
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL:
+    "https://roti-tool-e1dac-default-rtdb.europe-west1.firebasedatabase.app",
+});
 
 const firebaseConfig = {
   apiKey: "AIzaSyB5SUwgvvVciUho7HwpbjJTMtWjCywPUfA",
@@ -22,6 +33,25 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 export default {
-  createRoti: (newRoti) => {},
+  createRoti: (
+    thema,
+    trainer,
+    teachingAssistent,
+    date,
+    rotiValue,
+    rotiText
+  ) => {
+    firebase
+      .database()
+      .ref("users/" + userId)
+      .set({
+        thema: thema,
+        trainer: trainer,
+        teachingAssistent: teachingAssistent,
+        date: date,
+        rotiValue: rotiValue,
+        rotiText: rotiText,
+      });
+  },
   getRotis: () => {},
 };
