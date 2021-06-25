@@ -1,9 +1,14 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <header>
+    <nav id="nav">
+      <router-link to="/">Index</router-link> |
+      <router-link to="/new">Neuer Eintrag</router-link> |
+      <router-link to="/team">Team</router-link>
+    </nav>
+    <h1>ROTI TOOL</h1>
+  </header>
   <router-view />
+  <footer>Copyright XYZ</footer>
 </template>
 
 <style lang="scss">
