@@ -1,27 +1,21 @@
-/**
-     * 
-thema
-trainer
-teachingAssistent
-date
-rotiValue
-rotiText
-*/
-
 export default {
-  createRoti: (
-    thema,
-    trainer,
-    teachingAssistent,
-    date,
-    rotiValue,
-    rotiText
-  ) => {},
+  createRoti: (newRoti) => {
+    newRoti.sysDate = Date();
+
+    fetch("http://localhost:3000/rotis", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      body: JSON.stringify(newRoti),
+    });
+  },
+
   getRotis: () => {
-    fetch("http://localhost:4730/books")
+    fetch("http://localhost:3000/rotis")
       .then((response) => response.json())
-      .then((rotis) => {
-        this.rotis = rotis;
+      .then((rotiArray) => {
+        console.log(rotiArray);
       });
   },
 };
