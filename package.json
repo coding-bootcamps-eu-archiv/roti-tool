@@ -8,10 +8,12 @@
     "test:unit": "vue-cli-service test:unit",
     "test:unit:watch": "vue-cli-service test:unit --watch",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "server": "json-server --watch db.json"
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "firebase": "^8.6.8",
     "vue": "^3.0.4",
     "vue-router": "^4.0.3"
   },
