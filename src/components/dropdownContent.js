@@ -1,4 +1,4 @@
-export const trainer = [
+export const trainers = [
   {
     id: 1,
     name: "Jürgen",
@@ -21,7 +21,7 @@ export const trainer = [
   },
 ];
 
-export const teachingAssistent = [
+export const teachingAssistents = [
   {
     id: 1,
     name: "Simon",

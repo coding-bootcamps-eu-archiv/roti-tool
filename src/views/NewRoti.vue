@@ -22,13 +22,17 @@
       <Field
         as="select"
         name="trainer"
-        id="trainer"
+        id="trainers"
         class="dropdown-items"
         :rules="isRequired"
       >
         <option value="">--Trainer--</option>
-        <option :value="trainer" v-for="trainer in trainer" :key="trainer.id">
-          {{ trainer.name }}
+        <option
+          :value="trainer"
+          v-for="trainers in trainers"
+          :key="trainers.id"
+        >
+          {{ trainers.name }}
         </option>
       </Field>
       <br />
@@ -37,7 +41,7 @@
     <div>
       <Field
         name="teachingAssistent"
-        id="teachingAssistent"
+        id="teachingAssistents"
         class="dropdown-items"
         as="select"
         :rules="isRequired"
@@ -45,10 +49,10 @@
         <option value="">--Teaching Assistent--</option>
         <option
           :value="teachingAssistent"
-          v-for="teachingAssistent in teachingAssistent"
-          :key="teachingAssistent.id"
+          v-for="teachingAssistents in teachingAssistents"
+          :key="teachingAssistents.id"
         >
-          {{ teachingAssistent.name }}
+          {{ teachingAssistents.name }}
         </option>
       </Field>
       <br />
@@ -115,7 +119,8 @@
       <br />
       <error-message name="textarea"></error-message>
     </div>
-    <button class="full-width">Absenden</button>
+
+    <button router-link to="/Success" class="full-width">Absenden</button>
   </Form>
 </template>
 
@@ -123,8 +128,8 @@
 import { ErrorMessage, Form, Field } from "vee-validate";
 import {
   topics,
-  trainer,
-  teachingAssistent,
+  trainers,
+  teachingAssistents,
 } from "@/components/dropdownContent.js";
 
 export default {
@@ -137,8 +142,8 @@ export default {
   data: () => {
     return {
       topics,
-      trainer,
-      teachingAssistent,
+      trainers,
+      teachingAssistents,
     };
   },
   methods: {
