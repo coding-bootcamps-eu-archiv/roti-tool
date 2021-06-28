@@ -1,41 +1,52 @@
 <template>
   <h2>Neuer ROTI Eintrag</h2>
 
-  <form class="input-roti-form">
-    <select
-      name="field"
-      v-model="value"
+  <Form class="input-roti-form" @submit="onSubmit">
+    <Field
+      as="select"
+      name="topic"
       id="topics"
       class="dropdown-items"
-      required
+      :rules="isRequired"
     >
-      <option value=" ">--Thema--</option>
-      <option v-for="topics in topics" :key="topics.id" value="topic">
+      <option value="">--Thema--</option>
+      <option v-for="topics in topics" :key="topics.id" :value="topic">
         {{ topics.description }}
       </option>
-    </select>
+    </Field>
+    <error-message name="topic"></error-message>
 
-    <select name="trainer" id="trainer" class="dropdown-items">
+    <Field
+      as="select"
+      name="trainer"
+      id="trainer"
+      class="dropdown-items"
+      :rules="isRequired"
+    >
       <option value=" ">--Trainer--</option>
-      <option value="trainer" v-for="trainer in trainer" :key="trainer.id">
+      <option :value="trainer" v-for="trainer in trainer" :key="trainer.id">
         {{ trainer.name }}
       </option>
-    </select>
+    </Field>
+    <error-message name="trainer"></error-message>
 
-    <select
+    <Field
       name="teachingAssistent"
       id="teachingAssistent"
       class="dropdown-items"
+      as="select"
+      :rules="isRequired"
     >
-      <option value=" ">--Teaching Assistent--</option>
+      <option value="">--Teaching Assistent--</option>
       <option
-        value="teachingAssistent"
+        :value="teachingAssistent"
         v-for="teachingAssistent in teachingAssistent"
         :key="teachingAssistent.id"
       >
         {{ teachingAssistent.name }}
       </option>
-    </select>
+    </Field>
+    <error-message name="teachingAssistent"></error-message>
 
     <input
       placeholder="date"
@@ -76,11 +87,11 @@
       maxlength="1000"
     ></textarea>
     <button class="full-width">Absenden</button>
-  </form>
+  </Form>
 </template>
 
 <script>
-import { useField } from "vee-validate";
+import { ErrorMessage, Form, Field } from "vee-validate";
 import {
   topics,
   trainer,
@@ -89,7 +100,11 @@ import {
 
 export default {
   name: "NewRoti",
-  components: {},
+  components: {
+    Form,
+    Field,
+    ErrorMessage,
+  },
   data: () => {
     return {
       topics,
@@ -97,15 +112,11 @@ export default {
       teachingAssistent,
     };
   },
-  setup() {
-    // Validator function
-    const isRequired = (value) => (value ? true : "This field is required");
-    const { value, errorMessage } = useField("field", isRequired);
-
-    return {
-      value,
-      errorMessage,
-    };
+  methods: {
+    isRequired: (value) => (value ? true : "This field is required"),
+    onSubmit(values) {
+      alert(JSON.stringify(values, null, 2));
+    },
   },
 };
 </script>
