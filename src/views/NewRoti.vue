@@ -2,7 +2,13 @@
   <h2>Neuer ROTI Eintrag</h2>
 
   <form class="input-roti-form">
-    <select name="topics" id="topics" class="dropdown-items" required>
+    <select
+      name="field"
+      v-model="value"
+      id="topics"
+      class="dropdown-items"
+      required
+    >
       <option value=" ">--Thema--</option>
       <option v-for="topics in topics" :key="topics.id" value="topic">
         {{ topics.description }}
@@ -74,6 +80,7 @@
 </template>
 
 <script>
+import { useField } from "vee-validate";
 import {
   topics,
   trainer,
@@ -88,6 +95,16 @@ export default {
       topics,
       trainer,
       teachingAssistent,
+    };
+  },
+  setup() {
+    // Validator function
+    const isRequired = (value) => (value ? true : "This field is required");
+    const { value, errorMessage } = useField("field", isRequired);
+
+    return {
+      value,
+      errorMessage,
     };
   },
 };
