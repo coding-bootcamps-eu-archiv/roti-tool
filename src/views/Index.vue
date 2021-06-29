@@ -40,10 +40,17 @@
 
 <script>
 import InstructionCard from "@/components/InstructionCard.vue";
+import database from "@/api/database.js";
 
 export default {
   name: "Index",
   components: { InstructionCard },
+
+  data: () => {
+    return {
+      allRotis: database.getRotis(),
+    };
+  },
 };
 </script>
 
