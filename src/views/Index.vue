@@ -11,8 +11,7 @@
   <img
     src="http://www.agile-ux.com/wp-content/uploads/2010/11/roti-grosjean-agileux.png"
     alt="ROTI explanation"
-    width="300"
-    height="200"
+    style="height: 15rem; width: 20rem"
   />
   <ul>
     <li>
@@ -22,17 +21,17 @@
     <br />
     <li>
       4: Überdurchschnittlich/Guter Wert – Der Gewinn ist höher als die
-      investierte Zeit
+      investierte Zeit 😃
     </li>
     <br />
     <li>
       3: Durchschnittlich/Normaler Wert – Nutzen und Zeitaufwand halten sich die
-      Waage, die Zeit wurde nicht verschwendet
+      Waage, die Zeit wurde nicht verschwendet 🤓
     </li>
     <br />
     <li>
       2: Unterdurchschnittlich/Geringer Wert – Der Nutzen rechtfertigt die
-      investierte Zeit nicht zu 100%, es wurde Zeit verschenkt
+      investierte Zeit nicht zu 100%, es wurde Zeit verschenkt 🤷‍♂️
     </li>
     <br />
     <li>
@@ -41,7 +40,7 @@
     </li>
   </ul>
   <button class="rotiBtn" tabindex="100" @click="$router.push('/new')">
-    Klick fürs ROTI 🦄
+    Klick fürs ROTI ⭐️
   </button>
   <br />
   <article class="instruction-container">
@@ -53,19 +52,19 @@
       <InstructionCard
         headline="Schritt 1"
         description="Im ersten Schritt wählst du das Thema der von dir bewerteten Sitzung, die Trainer:in und ggf. die Teaching Assistants aus."
-        picture_src="https://images.unsplash.com/photo-1534481016308-0fca71578ae5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW5zdHJ1Y3Rpb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        picture_src="/static/Dropdown.png"
         picture_alt="Hier steht ALT Text für Picture 1"
       />
       <InstructionCard
         headline="Schritt 2"
         description="Hier kannst du deine Punktzahl von 1 bis 5 eingeben."
-        picture_src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aW5zdHJ1Y3Rpb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        picture_src="/static/Ranking.png"
         picture_alt="Hier steht ALT Text für Picture 2"
       />
       <InstructionCard
         headline="Schritt 3"
         description="Jetzt hast du die Möglichkeit, einen Kommentar zu hinterlassen, in dem du deine gewählte Punktzahl begründest und Feedback hinterlässt, was dir für die nächst höhere Punktzahl gefehlt hat."
-        picture_src="https://images.unsplash.com/photo-1589803299004-b9143b44275f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGluc3RydWN0aW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        picture_src="/static/Comment.png"
         picture_alt="Hier steht ALT Text für Picture 3"
       />
     </div>
@@ -92,8 +91,8 @@ export default {
 <style>
 @media screen and (min-width: 915px) {
   p {
-    margin-left: 15rem;
-    margin-right: 15rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
 
