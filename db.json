@@ -2,11 +2,11 @@
   "rotis": [
     {
       "rotiObj": {
-        "thema": "HTML",
+        "thema": "CSS",
         "trainer": "nico",
         "teachingAssistent": "David",
-        "rotiValue": "4",
-        "rotiText": "alles super"
+        "rotiValue": "3",
+        "rotiText": "alles toll"
       },
       "sysDate": "Mon Jun 28 2021 14:20:36 GMT+0200 (Mitteleuropäische Sommerzeit)",
       "id": 1
@@ -14,18 +14,18 @@
     {
       "thema": "HTML",
       "trainer": "nico",
-      "teachingAssistent": "David",
-      "rotiValue": "4",
-      "rotiText": "alles super",
+      "teachingAssistent": "Ferdinand",
+      "rotiValue": "2",
+      "rotiText": "suboptimal",
       "sysDate": "Mon Jun 28 2021 14:25:44 GMT+0200 (Mitteleuropäische Sommerzeit)",
       "id": 2
     },
     {
-      "thema": "HTML",
-      "trainer": "nico",
-      "teachingAssistent": "David",
+      "thema": "vue",
+      "trainer": "Toni",
+      "teachingAssistent": "nico",
       "rotiValue": "4",
-      "rotiText": "alles super",
+      "rotiText": "ganz viel toll",
       "sysDate": "Mon Jun 28 2021 14:26:12 GMT+0200 (Mitteleuropäische Sommerzeit)",
       "id": 3
     }
