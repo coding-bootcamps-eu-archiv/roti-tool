@@ -19,12 +19,14 @@ const members = [
     twitter: "https://twitter.com/MoussaTougri",
   },
   {
-    foto_url: "/static/zebra.jpg",
-    name: "Siegfried",
-    bullet1: "abc",
-    bullet2: "abc",
-    bullet3: "abc",
-    twitter: "",
+    foto_url: "/static/Nicolai.png",
+    name: "Nicolai Simon",
+    bullet1:
+      "Ich bin Nicolai, Web Developer, interessiert an digitalen Dingen und habe große Freude daran gemeinsam mit meiner Class#1 zu zaubern.",
+    bullet2:
+      "Unser gesammeltes Wissen in einem ROTI Tool verpackt als Abschlussprojekt eines tollen Coding Bootcamps! Boom!",
+    bullet3: "",
+    twitter: "https://www.linkedin.com/in/nicolai-simon",
   },
   {
     foto_url: "/static/Jan.png",
