@@ -1,13 +1,11 @@
 {
   "rotis": [
     {
-      "rotiObj": {
-        "thema": "CSS",
-        "trainer": "nico",
-        "teachingAssistent": "David",
-        "rotiValue": "3",
-        "rotiText": "alles toll"
-      },
+      "thema": "CSS",
+      "trainer": "nico",
+      "teachingAssistent": "David",
+      "rotiValue": "3",
+      "rotiText": "alles toll",
       "sysDate": "Mon Jun 28 2021 14:20:36 GMT+0200 (Mitteleuropäische Sommerzeit)",
       "id": 1
     },

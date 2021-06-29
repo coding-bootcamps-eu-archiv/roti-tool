@@ -1,9 +1,12 @@
 <template>
-  <article class="member">
-    <div class="textContent">
-      <li class="name">{{ name }}</li>
-    </div>
-  </article>
+  <tr>
+    <td>{{ thema }}</td>
+    <td>{{ trainer }}</td>
+    <td>{{ teachingAssistent }}</td>
+    <td>{{ rotiValue }}</td>
+    <td>{{ rotiText }}</td>
+    <td>{{ sysDate }}</td>
+  </tr>
 </template>
 
 <script>
@@ -20,13 +23,13 @@ export default {
       type: String,
     },
     rotiValue: {
-      type: Number,
+      type: String,
     },
     rotiText: {
       type: String,
     },
     sysDate: {
-      type: Date,
+      type: String,
     },
   },
 };

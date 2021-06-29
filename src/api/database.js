@@ -12,10 +12,6 @@ export default {
   },
 
   getRotis: () => {
-    fetch("http://localhost:3000/rotis")
-      .then((response) => response.json())
-      .then((rotis) => {
-        console.log(rotis);
-      });
+    return fetch("http://localhost:3000/rotis");
   },
 };

@@ -1,41 +1,66 @@
 <template>
-  <header class="team">
+  <header>
     <h2>Statistik</h2>
   </header>
-  <button @click="onClick">click</button>
-  <ul class="list">
-    <roti-list v-for="roti in rotis" :key="roti.id" v-bind="roti" />
-  </ul>
+  <div>
+    Filter nach Trainer:
+    <input type="text" placeholder="Trainer" v-model="inputValueTrainer" />
+    Ergebnisse: {{ filteredRotis.length }}
+  </div>
+  <div>
+    Filter nach Thema:
+    <input type="text" placeholder="Thema" v-model="inputValueThema" />
+    Ergebnisse: {{ filteredRotis.length }}
+  </div>
+  <table class="list">
+    <thead>
+      <tr>
+        <th>thema</th>
+        <th>trainer</th>
+        <th>teachingAssistent</th>
+        <th>Roti Note</th>
+        <th>Roti Kommentar</th>
+        <th>Datum (Roti abgegeben)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <roti-list v-for="roti in filteredRotis" :key="roti.id" v-bind="roti" />
+    </tbody>
+  </table>
 </template>
 
 <script>
 import RotiList from "../components/RotiList.vue";
-import getRotis from "../api/database";
+import dataBase from "../api/database";
 
 export default {
   name: "RotiTable",
   components: {
     RotiList,
   },
-  methods: {
-    onClick() {
-      getRotis.getRotis();
-    },
-  },
+
   data() {
     return {
       rotis: [],
-      trainer: "",
+      inputValueTrainer: "",
+      inputValueThema: "",
     };
   },
-  /*created() {
-    this.rotis = [...getRotis];
-    console.log(this.rotis);
-  },*/
+  computed: {
+    filteredRotis() {
+      return this.rotis.filter(
+        (roti) =>
+          roti.trainer.includes(this.inputValueTrainer) &&
+          roti.thema.includes(this.inputValueThema)
+      );
+    },
+  },
+  created() {
+    dataBase
+      .getRotis()
+      .then((response) => response.json())
+      .then((rotis) => (this.rotis = rotis));
+  },
 };
 </script>
-<style>
-.list {
-  all: unset;
-}
-</style>
+<style></style>
