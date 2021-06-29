@@ -120,7 +120,7 @@
       <error-message name="textarea"></error-message>
     </div>
 
-    <button router-link to="/Success" class="full-width">Absenden</button>
+    <button class="full-width">Absenden</button>
   </Form>
 </template>
 
@@ -150,6 +150,7 @@ export default {
     isRequired: (value) => (value ? true : "This field is required"),
     onSubmit(values) {
       alert(JSON.stringify(values, null, 2));
+      this.$router.push("/Success");
     },
   },
 };
