@@ -28,24 +28,6 @@
       "rotiText": "alles super",
       "sysDate": "Mon Jun 28 2021 14:26:12 GMT+0200 (Mitteleuropäische Sommerzeit)",
       "id": 3
-    },
-    {
-      "topic": "CSS",
-      "trainer": "Robin",
-      "teachingAssistent": "David",
-      "ranking": "3",
-      "textarea": "sdafadsf",
-      "sysDate": "Tue Jun 29 2021 13:39:32 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 4
-    },
-    {
-      "topic": "CSS",
-      "trainer": "Nico",
-      "teachingAssistent": "Michael",
-      "ranking": "1",
-      "textarea": "asdfa",
-      "sysDate": "Tue Jun 29 2021 15:15:11 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 5
     }
   ]
 }
