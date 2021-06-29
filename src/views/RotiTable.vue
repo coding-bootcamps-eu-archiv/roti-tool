@@ -14,11 +14,11 @@
 
   <div>
     Roti Verteilung in Prozent:
-    <P>1: {{ rotisWith1PointPercent }}%</P>
-    <P>2: {{ rotisWith2PointsPercent }}%</P>
-    <P>3: {{ rotisWith3PointsPercent }}%</P>
-    <P>4: {{ rotisWith4PointsPercent }}%</P>
-    <P>5: {{ rotisWith5PointsPercent }}%</P>
+    <P v-if="rotisWith1PointPercent != 0">1: {{ rotisWith1PointPercent }}%</P>
+    <P v-if="rotisWith2PointsPercent != 0">2: {{ rotisWith2PointsPercent }}%</P>
+    <P v-if="rotisWith3PointsPercent != 0">3: {{ rotisWith3PointsPercent }}%</P>
+    <P v-if="rotisWith4PointsPercent != 0">4: {{ rotisWith4PointsPercent }}%</P>
+    <P v-if="rotisWith5PointsPercent != 0">5: {{ rotisWith5PointsPercent }}%</P>
   </div>
   <table class="list">
     <thead>
@@ -27,24 +27,38 @@
         <th>trainer</th>
         <th>teachingAssistent</th>
         <th>Roti Note</th>
-        <th>Roti Kommentar</th>
+        <th v-if="teacher === true">Roti Kommentar</th>
         <th>Datum (Roti abgegeben)</th>
       </tr>
     </thead>
-    <tbody>
-      <roti-list v-for="roti in filteredRotis" :key="roti.id" v-bind="roti" />
+    <tbody v-if="teacher === true">
+      <roti-list-teacher
+        v-for="roti in filteredRotis"
+        :key="roti.id"
+        v-bind="roti"
+      />
+    </tbody>
+
+    <tbody v-if="teacher === false">
+      <roti-list-student
+        v-for="roti in filteredRotis"
+        :key="roti.id"
+        v-bind="roti"
+      />
     </tbody>
   </table>
 </template>
 
 <script>
-import RotiList from "../components/RotiList.vue";
+import RotiListTeacher from "../components/RotiListTeacher.vue";
+import RotiListStudent from "../components/RotiListStudent.vue";
 import dataBase from "../api/database";
 
 export default {
   name: "RotiTable",
   components: {
-    RotiList,
+    RotiListStudent,
+    RotiListTeacher,
   },
 
   data() {
@@ -52,6 +66,7 @@ export default {
       rotis: [],
       inputValueTrainer: "",
       inputValueThema: "",
+      teacher: false,
     };
   },
   computed: {
