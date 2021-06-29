@@ -8,7 +8,11 @@
     <h1>ROTI TOOL</h1>
   </header>
   <router-view />
-  <footer>Copyright XYZ</footer>
+  <footer>
+    <p>Copyright</p>
+    <p>Impressum</p>
+    <p>Datenschutz</p>
+  </footer>
 </template>
 
 <style lang="scss">
