@@ -126,7 +126,7 @@ import {
   trainers,
   teachingAssistents,
 } from "@/components/dropdownContent.js";
-import { dataBase } from "@/api/database.js";
+import dataBase from "@/api/database.js";
 
 export default {
   name: "NewRoti",

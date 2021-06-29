@@ -1,4 +1,4 @@
-export const dataBase = {
+export default {
   createRoti: (newRoti) => {
     newRoti.sysDate = Date();
 
