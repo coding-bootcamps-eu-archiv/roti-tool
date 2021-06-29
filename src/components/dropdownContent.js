@@ -1,42 +1,26 @@
 export const trainers = [
   {
     id: 1,
-    name: "Jürgen",
+    name: "Nico",
   },
   {
     id: 2,
-    name: "Otto",
-  },
-  {
-    id: 3,
-    name: "Peter",
-  },
-  {
-    id: 4,
-    name: "Paul",
-  },
-  {
-    id: 5,
-    name: "Julia",
+    name: "Robin",
   },
 ];
 
 export const teachingAssistents = [
   {
     id: 1,
-    name: "Simon",
+    name: "Michael",
   },
   {
     id: 2,
-    name: "Sandra",
+    name: "David",
   },
   {
     id: 3,
-    name: "Sonja",
-  },
-  {
-    id: 4,
-    name: "Jan",
+    name: "Ferdinand",
   },
 ];
 

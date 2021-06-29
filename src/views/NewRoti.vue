@@ -58,12 +58,7 @@
       <br />
       <error-message name="teachingAssistent"></error-message>
     </div>
-    <input
-      placeholder="date"
-      class="textbox-n dropdown-items"
-      type="date"
-      id="date"
-    />
+
     <div class="full-width">
       <Field
         as="radio"
@@ -111,7 +106,7 @@
           id="comment"
           cols="30"
           rows="10"
-          placeholder="Gib dein Kommentar ab (1000 Zeichen)"
+          placeholder="Gib dein Kommentar ab (max. 1000 Zeichen)"
           maxlength="1000"
         ></textarea>
       </Field>
