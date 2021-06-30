@@ -3,7 +3,7 @@
     <path
       fill="var(--bootcamp-color)"
       fill-opacity="1"
-      d="M0,224L80,192C160,160,320,96,480,64C640,32,800,32,960,48C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+      d="M0,192L80,160C160,128,320,64,480,74.7C640,85,800,171,960,181.3C1120,192,1280,128,1360,96L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
     ></path>
   </svg>
   <h2>Was ist ein ROTI?</h2>
@@ -116,6 +116,10 @@ export default {
   }
 }
 
+body {
+  margin: 0;
+}
+
 .rotiBtn {
   padding: 1rem;
   background-color: var(--bootcamp-color);
@@ -134,5 +138,9 @@ hr {
 
   height: 2px;
   background-color: var(--bootcamp-color);
+}
+
+li {
+  list-style: none;
 }
 </style>
