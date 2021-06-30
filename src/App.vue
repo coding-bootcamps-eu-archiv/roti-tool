@@ -5,6 +5,7 @@
       <router-link to="/new">Neuer Eintrag</router-link> |
       <router-link to="/team">Team</router-link> |
       <router-link to="/table">Statistik</router-link>
+      <router-link to="/login">Log-in</router-link>
     </nav>
     <h1>ROTI TOOL</h1>
   </header>
