@@ -162,6 +162,7 @@ label {
 #textarea {
   width: 800px;
   height: 100px;
+  background-color: white;
 }
 
 .input-roti-form {
