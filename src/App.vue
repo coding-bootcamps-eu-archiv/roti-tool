@@ -32,4 +32,8 @@
     }
   }
 }
+
+html {
+  --bootcamp-color: #6a1cc3;
+}
 </style>
