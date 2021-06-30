@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Index.vue";
 import Team from "../views/Team.vue";
 import New from "../views/NewRoti.vue";
+import Login from "../views/Login.vue";
 import Success from "../views/Success.vue";
 
 const routes = [
@@ -24,6 +25,11 @@ const routes = [
     path: "/new",
     name: "New",
     component: New,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
   },
   {
     path: "/success",
