@@ -1,4 +1,11 @@
 <template>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path
+      fill="#6a1cc3"
+      fill-opacity="1"
+      d="M0,224L80,192C160,160,320,96,480,64C640,32,800,32,960,48C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+    ></path>
+  </svg>
   <h2>Was ist ein ROTI?</h2>
   <p>
     ROTI ist eine Feedback-Methode, bei der Menschen unkompliziert angeben
@@ -43,6 +50,7 @@
     Klick fürs ROTI ⭐️
   </button>
   <br />
+  <hr />
   <article class="instruction-container">
     <h2>Anleitung</h2>
     <p>
@@ -55,12 +63,14 @@
         picture_src="/static/Dropdown.png"
         picture_alt="Hier steht ALT Text für Picture 1"
       />
+      <hr />
       <InstructionCard
         headline="Schritt 2"
         description="Hier kannst du deine Punktzahl von 1 bis 5 eingeben."
         picture_src="/static/Ranking.png"
         picture_alt="Hier steht ALT Text für Picture 2"
       />
+      <hr />
       <InstructionCard
         headline="Schritt 3"
         description="Jetzt hast du die Möglichkeit, einen Kommentar zu hinterlassen, in dem du deine gewählte Punktzahl begründest und Feedback hinterlässt, was dir für die nächst höhere Punktzahl gefehlt hat."
@@ -73,6 +83,13 @@
   <button class="rotiBtn" tabindex="100" @click="$router.push('/new')">
     Klick fürs ROTI ⭐️
   </button>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path
+      fill="#6a1cc3"
+      fill-opacity="1"
+      d="M0,192L80,160C160,128,320,64,480,74.7C640,85,800,171,960,181.3C1120,192,1280,128,1360,96L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+    ></path>
+  </svg>
 </template>
 
 <script>
@@ -110,5 +127,12 @@ export default {
 
 .instruction-container {
   margin-top: 5rem;
+}
+
+hr {
+  border: 0;
+
+  height: 2px;
+  background-color: #6a1cc3;
 }
 </style>
