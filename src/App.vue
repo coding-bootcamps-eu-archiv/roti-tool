@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav id="nav">
-      <router-link to="/">Index</router-link> |
+      <router-link to="/">Startseite</router-link> |
       <router-link to="/new">Neuer Eintrag</router-link> |
       <router-link to="/team">Team</router-link> |
       <router-link to="/table">Statistik</router-link>
@@ -14,6 +14,12 @@
 </template>
 
 <style lang="scss">
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,8 +36,12 @@
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: var(--bootcamp-color);
     }
   }
+}
+
+html {
+  --bootcamp-color: #6a1cc3;
 }
 </style>
