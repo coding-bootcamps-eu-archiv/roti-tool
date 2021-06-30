@@ -11,7 +11,7 @@
   <img
     src="http://www.agile-ux.com/wp-content/uploads/2010/11/roti-grosjean-agileux.png"
     alt="ROTI explanation"
-    style="height: 15rem; width: 20rem"
+    style="width: 30%; height: auto"
   />
   <ul>
     <li>
