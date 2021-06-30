@@ -10,15 +10,16 @@
     Filter nach Thema:
     <input type="text" placeholder="Thema" v-model="inputValueThema" />
   </div>
+  <p></p>
   Ergebnisse: {{ filteredRotis.length }}
 
   <div>
     Roti Verteilung in Prozent:
-    <P v-if="rotisWith1PointPercent != 0">1: {{ rotisWith1PointPercent }}%</P>
-    <P v-if="rotisWith2PointsPercent != 0">2: {{ rotisWith2PointsPercent }}%</P>
-    <P v-if="rotisWith3PointsPercent != 0">3: {{ rotisWith3PointsPercent }}%</P>
-    <P v-if="rotisWith4PointsPercent != 0">4: {{ rotisWith4PointsPercent }}%</P>
-    <P v-if="rotisWith5PointsPercent != 0">5: {{ rotisWith5PointsPercent }}%</P>
+    <p v-if="rotisWith1PointPercent != 0">1: {{ rotisWith1PointPercent }}%</p>
+    <p v-if="rotisWith2PointsPercent != 0">2: {{ rotisWith2PointsPercent }}%</p>
+    <p v-if="rotisWith3PointsPercent != 0">3: {{ rotisWith3PointsPercent }}%</p>
+    <p v-if="rotisWith4PointsPercent != 0">4: {{ rotisWith4PointsPercent }}%</p>
+    <p v-if="rotisWith5PointsPercent != 0">5: {{ rotisWith5PointsPercent }}%</p>
   </div>
   <table class="list">
     <thead>
