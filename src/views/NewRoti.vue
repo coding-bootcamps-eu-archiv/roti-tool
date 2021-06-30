@@ -131,6 +131,7 @@ import {
   trainers,
   teachingAssistents,
 } from "@/components/dropdownContent.js";
+import dataBase from "@/api/database.js";
 
 export default {
   name: "NewRoti",
@@ -144,12 +145,14 @@ export default {
       topics,
       trainers,
       teachingAssistents,
+      dataBase,
     };
   },
   methods: {
     isRequired: (value) => (value ? true : "This field is required"),
     onSubmit(values) {
       alert(JSON.stringify(values, null, 2));
+      this.dataBase.createRoti(values, null, 2);
       this.$router.push("/Success");
     },
   },
