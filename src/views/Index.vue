@@ -16,7 +16,7 @@
     haben:
   </p>
   <img
-    src="https://www.agile-ux.com/wp-content/uploads/2010/11/roti-grosjean-agileux.png"
+    src="http://www.agile-ux.com/wp-content/uploads/2010/11/roti-grosjean-agileux.png"
     alt="ROTI explanation"
     style="width: 30%; height: auto"
   />
