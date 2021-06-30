@@ -13,17 +13,17 @@
   <p></p>
   Ergebnisse: {{ filteredRotis.length }}
 
-  <div>
+  <div v-if="filteredRotis.length > 0">
     Roti Verteilung in Prozent:
-    <p v-if="rotisWith1PointPercent != 0">1: {{ rotisWith1PointPercent }}%</p>
-    <p v-if="rotisWith2PointsPercent != 0">2: {{ rotisWith2PointsPercent }}%</p>
-    <p v-if="rotisWith3PointsPercent != 0">3: {{ rotisWith3PointsPercent }}%</p>
-    <p v-if="rotisWith4PointsPercent != 0">4: {{ rotisWith4PointsPercent }}%</p>
-    <p v-if="rotisWith5PointsPercent != 0">5: {{ rotisWith5PointsPercent }}%</p>
+    <p v-if="rotisWith1PointPercent > 0">1: {{ rotisWith1PointPercent }}%</p>
+    <p v-if="rotisWith2PointsPercent > 0">2: {{ rotisWith2PointsPercent }}%</p>
+    <p v-if="rotisWith3PointsPercent > 0">3: {{ rotisWith3PointsPercent }}%</p>
+    <p v-if="rotisWith4PointsPercent > 0">4: {{ rotisWith4PointsPercent }}%</p>
+    <p v-if="rotisWith5PointsPercent > 0">5: {{ rotisWith5PointsPercent }}%</p>
   </div>
   <table class="list">
     <thead>
-      <tr>
+      <tr v-if="filteredRotis.length > 0">
         <th>thema</th>
         <th>trainer</th>
         <th>teachingAssistent</th>

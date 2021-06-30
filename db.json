@@ -26,6 +26,24 @@
       "rotiText": "ganz viel toll",
       "sysDate": "Mon Jun 28 2021 14:26:12 GMT+0200 (Mitteleuropäische Sommerzeit)",
       "id": 3
+    },
+    {
+      "thema": "JS",
+      "trainer": "Robin",
+      "teachingAssistent": "nico",
+      "rotiValue": "5",
+      "rotiText": "super stuff",
+      "sysDate": "Mon Jun 28 2021 14:26:12 GMT+0200 (Mitteleuropäische Sommerzeit)",
+      "id": 4
+    },
+    {
+      "thema": "Debugging",
+      "trainer": "David",
+      "teachingAssistent": "Robin",
+      "rotiValue": "1",
+      "rotiText": "komisch, im Dev-Tool zu debuggen",
+      "sysDate": "Mon Jun 28 2021 14:26:12 GMT+0200 (Mitteleuropäische Sommerzeit)",
+      "id": 5
     }
   ]
 }
