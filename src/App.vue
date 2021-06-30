@@ -12,6 +12,12 @@
 </template>
 
 <style lang="scss">
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,5 +37,9 @@
       color: #42b983;
     }
   }
+}
+
+html {
+  --bootcamp-color: #6a1cc3;
 }
 </style>
