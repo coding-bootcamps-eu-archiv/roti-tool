@@ -70,6 +70,9 @@
     </div>
   </article>
   <br />
+  <button class="rotiBtn" tabindex="100" @click="$router.push('/new')">
+    Klick fürs ROTI ⭐️
+  </button>
 </template>
 
 <script>
