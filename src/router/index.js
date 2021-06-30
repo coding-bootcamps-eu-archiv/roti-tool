@@ -2,11 +2,8 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Index.vue";
 import Team from "../views/Team.vue";
 import New from "../views/NewRoti.vue";
-<<<<<<< HEAD
 import Rotis from "../views/RotiTable.vue";
-=======
 import Success from "../views/Success.vue";
->>>>>>> development
 
 const routes = [
   {
@@ -30,15 +27,14 @@ const routes = [
     component: New,
   },
   {
-<<<<<<< HEAD
     path: "/table",
     name: "RotiList",
     component: Rotis,
-=======
+  },
+  {
     path: "/success",
     name: "Success",
     component: Success,
->>>>>>> development
   },
 ];
 

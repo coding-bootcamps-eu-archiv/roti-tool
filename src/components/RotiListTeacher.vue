@@ -1,19 +1,24 @@
 <template>
   <tr>
-    <td>{{ thema }}</td>
+    <td>{{ topic }}</td>
     <td>{{ trainer }}</td>
     <td>{{ teachingAssistent }}</td>
-    <td>{{ rotiValue }}</td>
-    <td>{{ rotiText }}</td>
-    <td>{{ sysDate }}</td>
+    <td>{{ ranking }}</td>
+    <td>{{ textarea }}</td>
+    <td>{{ dateFormatter(sysDate) }}</td>
   </tr>
 </template>
 
 <script>
 export default {
   name: "RotiList",
+  methods: {
+    dateFormatter: (date) => {
+      return date.toDateString();
+    },
+  },
   props: {
-    thema: {
+    topic: {
       type: String,
     },
     trainer: {
@@ -22,14 +27,14 @@ export default {
     teachingAssistent: {
       type: String,
     },
-    rotiValue: {
+    ranking: {
       type: String,
     },
-    rotiText: {
+    textarea: {
       type: String,
     },
     sysDate: {
-      type: String,
+      type: Date,
     },
   },
 };

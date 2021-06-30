@@ -1,49 +1,40 @@
 {
   "rotis": [
     {
-      "thema": "CSS",
-      "trainer": "nico",
-      "teachingAssistent": "David",
-      "rotiValue": "3",
-      "rotiText": "alles toll",
-      "sysDate": "Mon Jun 28 2021 14:20:36 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 1
+      "topic": "HTML",
+      "trainer": "Nico",
+      "teachingAssistent": "Michael",
+      "ranking": "4",
+      "textarea": ".dfna.dskfnlk<fmn.akbvnafdmssdk.fnad.fkjndsal-kdmf.na.fkjsdk",
+      "sysDate": 1625053332015,
+      "id": 8
     },
     {
-      "thema": "HTML",
-      "trainer": "nico",
-      "teachingAssistent": "Ferdinand",
-      "rotiValue": "2",
-      "rotiText": "suboptimal",
-      "sysDate": "Mon Jun 28 2021 14:25:44 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 2
-    },
-    {
-      "thema": "vue",
-      "trainer": "Toni",
-      "teachingAssistent": "nico",
-      "rotiValue": "4",
-      "rotiText": "ganz viel toll",
-      "sysDate": "Mon Jun 28 2021 14:26:12 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 3
-    },
-    {
-      "thema": "JS",
+      "topic": "JS",
       "trainer": "Robin",
-      "teachingAssistent": "nico",
-      "rotiValue": "5",
-      "rotiText": "super stuff",
-      "sysDate": "Mon Jun 28 2021 14:26:12 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 4
+      "teachingAssistent": "Michael",
+      "ranking": "2",
+      "textarea": "dfsdfdsfsfdsffsdfsdfd",
+      "sysDate": 1615053332015,
+      "id": 7
     },
     {
-      "thema": "Debugging",
-      "trainer": "David",
-      "teachingAssistent": "Robin",
-      "rotiValue": "1",
-      "rotiText": "komisch, im Dev-Tool zu debuggen",
-      "sysDate": "Mon Jun 28 2021 14:26:12 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 5
+      "topic": "JS",
+      "trainer": "Nico",
+      "teachingAssistent": "Michael",
+      "ranking": "4",
+      "textarea": "bndfnds.dfn.nyfnf<s.ldsfnk.kfjn.\n",
+      "sysDate": 1625060967759,
+      "id": 9
+    },
+    {
+      "topic": "VUE",
+      "trainer": "Nico",
+      "teachingAssistent": "David",
+      "ranking": "5",
+      "textarea": "sdadadasdasdasdasda",
+      "sysDate": 1625061152402,
+      "id": 10
     }
   ]
 }

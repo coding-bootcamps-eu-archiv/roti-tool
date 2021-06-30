@@ -3,12 +3,16 @@
     <h2>Statistik</h2>
   </header>
   <div>
-    Filter nach Trainer:
+    Filter nach Trainer:in:
     <input type="text" placeholder="Trainer" v-model="inputValueTrainer" />
   </div>
   <div>
     Filter nach Thema:
     <input type="text" placeholder="Thema" v-model="inputValueThema" />
+  </div>
+  <div>
+    Filter nach Datum:
+    <input type="text" placeholder="Datum" v-model="inputValueDatum" />
   </div>
   <p></p>
   Ergebnisse: {{ filteredRotis.length }}
@@ -24,12 +28,12 @@
   <table class="list">
     <thead>
       <tr v-if="filteredRotis.length > 0">
-        <th>thema</th>
-        <th>trainer</th>
-        <th>teachingAssistent</th>
-        <th>Roti Note</th>
-        <th v-if="teacher === true">Roti Kommentar</th>
-        <th>Datum (Roti abgegeben)</th>
+        <th>Thema</th>
+        <th>Trainer:in</th>
+        <th>TeachingAssistent:in</th>
+        <th>ROTI</th>
+        <th v-if="teacher === true">ROTI Kommentar</th>
+        <th>Datum (ROTI abgegeben)</th>
       </tr>
     </thead>
     <tbody v-if="teacher === true">
@@ -67,6 +71,7 @@ export default {
       rotis: [],
       inputValueTrainer: "",
       inputValueThema: "",
+      inputValueDatum: "",
       teacher: false,
     };
   },
@@ -75,15 +80,17 @@ export default {
       return this.rotis.filter(
         (roti) =>
           roti.trainer.includes(this.inputValueTrainer) &&
-          roti.thema.includes(this.inputValueThema)
+          roti.topic.includes(this.inputValueThema) &&
+          roti.sysDate.toDateString().includes(this.inputValueDatum)
       );
     },
     rotisWith1Point() {
       return this.rotis.filter(
         (roti) =>
-          roti.rotiValue.includes("1") &&
+          roti.ranking.includes("1") &&
           roti.trainer.includes(this.inputValueTrainer) &&
-          roti.thema.includes(this.inputValueThema)
+          roti.topic.includes(this.inputValueThema) &&
+          roti.sysDate.toDateString().includes(this.inputValueDatum)
       );
     },
     rotisWith1PointPercent() {
@@ -92,9 +99,10 @@ export default {
     rotisWith2Points() {
       return this.rotis.filter(
         (roti) =>
-          roti.rotiValue.includes("2") &&
+          roti.ranking.includes("2") &&
           roti.trainer.includes(this.inputValueTrainer) &&
-          roti.thema.includes(this.inputValueThema)
+          roti.topic.includes(this.inputValueThema) &&
+          roti.sysDate.toDateString().includes(this.inputValueDatum)
       );
     },
     rotisWith2PointsPercent() {
@@ -103,9 +111,10 @@ export default {
     rotisWith3Points() {
       return this.rotis.filter(
         (roti) =>
-          roti.rotiValue.includes("3") &&
+          roti.ranking.includes("3") &&
           roti.trainer.includes(this.inputValueTrainer) &&
-          roti.thema.includes(this.inputValueThema)
+          roti.topic.includes(this.inputValueThema) &&
+          roti.sysDate.toDateString().includes(this.inputValueDatum)
       );
     },
     rotisWith3PointsPercent() {
@@ -114,9 +123,10 @@ export default {
     rotisWith4Points() {
       return this.rotis.filter(
         (roti) =>
-          roti.rotiValue.includes("4") &&
+          roti.ranking.includes("4") &&
           roti.trainer.includes(this.inputValueTrainer) &&
-          roti.thema.includes(this.inputValueThema)
+          roti.topic.includes(this.inputValueThema) &&
+          roti.sysDate.toDateString().includes(this.inputValueDatum)
       );
     },
     rotisWith4PointsPercent() {
@@ -125,9 +135,10 @@ export default {
     rotisWith5Points() {
       return this.rotis.filter(
         (roti) =>
-          roti.rotiValue.includes("5") &&
+          roti.ranking.includes("5") &&
           roti.trainer.includes(this.inputValueTrainer) &&
-          roti.thema.includes(this.inputValueThema)
+          roti.topic.includes(this.inputValueThema) &&
+          roti.sysDate.toDateString().includes(this.inputValueDatum)
       );
     },
     rotisWith5PointsPercent() {
@@ -139,6 +150,17 @@ export default {
     dataBase
       .getRotis()
       .then((response) => response.json())
+      .then((rotis) =>
+        rotis.sort(
+          (rotiLeft, rotiRight) => rotiLeft.sysDate + rotiRight.sysDate
+        )
+      )
+      .then((rotis) => {
+        rotis.forEach((roti) => {
+          roti.sysDate = new Date(roti.sysDate);
+        });
+        return rotis;
+      })
       .then((rotis) => (this.rotis = rotis));
   },
 };
