@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav id="nav">
-      <router-link to="/">Index</router-link> |
+      <router-link to="/">Startseite</router-link> |
       <router-link to="/new">Neuer Eintrag</router-link> |
       <router-link to="/team">Team</router-link>
     </nav>
@@ -34,7 +34,7 @@
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: var(--bootcamp-color);
     }
   }
 }

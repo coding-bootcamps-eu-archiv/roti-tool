@@ -20,6 +20,10 @@
     alt="ROTI explanation"
     style="width: 30%; height: auto"
   />
+  <p class="source">
+    (Quelle:
+    http://www.agile-ux.com/wp-content/uploads/2010/11/roti-grosjean-agileux.png)
+  </p>
   <ul>
     <li>
       5: Exzellent/Hoher Wert – Der Nutzen der Veranstaltung ist viel mehr Wert
@@ -142,5 +146,13 @@ hr {
 
 li {
   list-style: none;
+}
+
+.source {
+  font-size: 0.8rem;
+}
+
+button {
+  border: none;
 }
 </style>
