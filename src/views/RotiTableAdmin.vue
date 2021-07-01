@@ -4,17 +4,32 @@
     <h2>Admin: Statistik</h2>
     <p>In diesem Bereich sind die Kommentare der Rotis zu sehen 📝</p>
   </header>
-  <div>
+  <div class="filter" id="textTrainer">
     Filter nach Trainer:in:
-    <input type="text" placeholder="Trainer" v-model="inputValueTrainer" />
+    <input
+      type="text"
+      id="trainerFilter"
+      placeholder="Trainer"
+      v-model="inputValueTrainer"
+    />
   </div>
-  <div>
+  <div class="filter" id="textThema">
     Filter nach Thema:
-    <input type="text" placeholder="Thema" v-model="inputValueThema" />
+    <input
+      type="text"
+      id="themaFilter"
+      placeholder="Thema"
+      v-model="inputValueThema"
+    />
   </div>
-  <div>
+  <div class="filter" id="textDatum">
     Filter nach Datum:
-    <input type="text" placeholder="Datum" v-model="inputValueDatum" />
+    <input
+      type="text"
+      id="datumFilter"
+      placeholder="Datum"
+      v-model="inputValueDatum"
+    />
   </div>
   <p></p>
   Ergebnisse: {{ filteredRotis.length }}
@@ -32,10 +47,10 @@
       <tr class="rotiTable" v-if="filteredRotis.length > 0">
         <th class="thema">Thema</th>
         <th class="trainer">Trainer:in</th>
-        <th class="teachingAss">TeachingAssistent:in</th>
+        <th class="teachingAss">TeachingAss.</th>
         <th class="roti">ROTI</th>
         <th class="comment" v-if="teacher === true">ROTI Kommentar</th>
-        <th class="date">Datum (ROTI abgegeben)</th>
+        <th class="date">Datum (ROTI)</th>
       </tr>
     </thead>
     <tbody v-if="teacher === true">
@@ -148,39 +163,37 @@ export default {
 };
 </script>
 <style scoped>
-/**
-* Start of grid styling for table
-* issues to create styling for table body
-*
-@media only screen and (min-width: 550px) {
-  .list {
-    display: grid;
-    height: 40vh;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 6fr;
-    grid-template-areas:
-      "Tablehead"
-      "Tablebody";
-    grid-gap: 1rem;
-    font-family: "Inter", sans-serif;
-
-    margin: 1rem;
-    justify-items: center;
-  }
-  .tablehead {
-    grid-area: Tablehead;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 16px;
-    justify-self: center;
-  }
-  .tablebody {
-    grid-area: Tablebody;
-    font-weight: 200;
-    text-transform: none;
-    font-size: 12px;
-    justify-self: center;
+@media screen and (max-width: 470) {
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
-*/
+.filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: right;
+}
+.filter {
+  margin: 10px;
+}
+#trainerFilter {
+  width: 200px;
+}
+#themaFilter {
+  width: 200px;
+}
+#datumFilter {
+  width: 200px;
+}
+.list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
 </style>

@@ -3,17 +3,32 @@
   <header>
     <h2>Statistik</h2>
   </header>
-  <div class="filter">
+  <div class="filter" id="textTrainer">
     Filter nach Trainer:in:
-    <input type="text" placeholder="Trainer" v-model="inputValueTrainer" />
+    <input
+      type="text"
+      id="trainerFilter"
+      placeholder="Trainer"
+      v-model="inputValueTrainer"
+    />
   </div>
-  <div class="filter">
+  <div class="filter" id="textThema">
     Filter nach Thema:
-    <input type="text" placeholder="Thema" v-model="inputValueThema" />
+    <input
+      type="text"
+      id="themaFilter"
+      placeholder="Thema"
+      v-model="inputValueThema"
+    />
   </div>
-  <div class="filter">
+  <div class="filter" id="textDatum">
     Filter nach Datum:
-    <input type="text" placeholder="Datum" v-model="inputValueDatum" />
+    <input
+      type="text"
+      id="datumFilter"
+      placeholder="Datum"
+      v-model="inputValueDatum"
+    />
   </div>
   <p></p>
   Ergebnisse: {{ filteredRotis.length }}
@@ -27,14 +42,14 @@
     <p v-if="rotisWith5PointsPercent > 0">5: {{ rotisWith5PointsPercent }}%</p>
   </div>
   <table class="list">
-    <thead>
-      <tr v-if="filteredRotis.length > 0">
-        <th>Thema</th>
-        <th>Trainer:in</th>
-        <th>TeachingAssistent:in</th>
-        <th>ROTI</th>
-        <th v-if="teacher === true">ROTI Kommentar</th>
-        <th>Datum (ROTI abgegeben)</th>
+    <thead class="tablehead">
+      <tr class="rotiTable" v-if="filteredRotis.length > 0">
+        <th class="thema">Thema</th>
+        <th class="trainer">Trainer:in</th>
+        <th class="teachingAss">TeachingAss.</th>
+        <th class="roti">ROTI</th>
+        <th class="comment" v-if="teacher === true">ROTI Kommentar</th>
+        <th class="date">Datum (ROTI)</th>
       </tr>
     </thead>
     <tbody v-if="teacher === true">
@@ -45,7 +60,7 @@
       />
     </tbody>
 
-    <tbody v-if="teacher === false">
+    <tbody class="tablebody" v-if="teacher === false">
       <roti-list-student
         v-for="roti in filteredRotis"
         :key="roti.id"
@@ -151,15 +166,9 @@ export default {
 @media screen and (max-width: 470) {
   .filter {
     display: flex;
-    _grid-template-columns: 1fr;
     flex-wrap: wrap;
-    _grid-gap: 1.5rem;
-    _margin-left: 1.5rem;
-    _margin-right: 1.5rem;
-    _text-align: right;
   }
 }
-
 .filter {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -167,5 +176,24 @@ export default {
   margin-left: 5rem;
   margin-right: 5rem;
   text-align: right;
+}
+.filter {
+  margin: 10px;
+}
+#trainerFilter {
+  width: 200px;
+}
+#themaFilter {
+  width: 200px;
+}
+#datumFilter {
+  width: 200px;
+}
+.list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 </style>
