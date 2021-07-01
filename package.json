@@ -20,6 +20,7 @@
     "json-server": "^0.16.3",
     "vee-validate": "^4.4.5",
     "vue": "^3.0.4",
+    "vue-chartjs": "^3.5.1",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
