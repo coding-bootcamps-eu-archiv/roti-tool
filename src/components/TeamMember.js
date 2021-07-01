@@ -1,16 +1,16 @@
 const members = [
   {
     foto_url: "/static/Vanessa.png",
-    name: "Vanessa",
+    name: "Vanessa Wagner",
     bullet1:
       "Es ist schon schwer, das gewohnte Umfeld und den sicheren Fels zu verlassen. Man muss sich dann ins Gedächtnis rufen: „Es passiert doch nichts!“ „Was wäre das Schlimmste, was passieren kann?“ Und sich dann einfach trauen.",
     bullet2:
-      "Wenn man schon den Gedanken hat, was anderes machen zu wollen, dann ist es bereits ein Indiz dafür, dass es einem da, wo man ist, nicht gefällt. Und dann sollte man auch handeln, bevor man jahrelang in einem Job festhängt, der nicht 100% gefällt, und es hinterher bereut sich nicht getraut zu haben.",
+      "Ich bin froh, dass ich den Schritt gewagt habe, und kann nur weiter empfehlen.",
     bullet3: "",
     twitter: "https://twitter.com/i_n3ssa",
   },
   {
-    foto_url: "/static/Moussa.jpeg",
+    foto_url: "/static/Moussa.png",
     name: "Moussa Tougri",
     bullet1: "Hi, ich bin der Moussa und bin Frontend Developer.",
     bullet2:
