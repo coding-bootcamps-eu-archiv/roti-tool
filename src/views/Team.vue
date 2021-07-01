@@ -50,10 +50,7 @@ export default {
 };
 </script>
 <style>
-@media screen and (min-width: 915px) {
-  p {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
+p {
+  margin: 0 1.5rem;
 }
 </style>
