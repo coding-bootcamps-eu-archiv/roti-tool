@@ -10,7 +10,7 @@ const members = [
     twitter: "https://twitter.com/i_n3ssa",
   },
   {
-    foto_url: "/static/Moussa.jpeg",
+    foto_url: "/static/Moussa.png",
     name: "Moussa Tougri",
     bullet1: "Hi, ich bin der Moussa und bin Frontend Developer.",
     bullet2:
