@@ -24,7 +24,7 @@ export default {
     const ranking = this.chartData.map((d) => d.ranking).reverse();
     const dates = this.chartData.map((d) => d.sysDate).reverse();
 
-    this.renerChart(
+    this.renderChart(
       {
         labels: dates,
         datasets: [
