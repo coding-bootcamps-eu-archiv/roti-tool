@@ -1,11 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path
-      fill="var(--bootcamp-color)"
-      fill-opacity="1"
-      d="M0,192L80,160C160,128,320,64,480,74.7C640,85,800,171,960,181.3C1120,192,1280,128,1360,96L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-    ></path>
-  </svg>
+  <DesignTop />
   <h2>Was ist ein ROTI?</h2>
   <p>
     ROTI ist eine Feedback-Methode, bei der Menschen unkompliziert angeben
@@ -89,22 +83,22 @@
   <button class="rotiBtn" tabindex="100" @click="$router.push('/new')">
     Klick fürs ROTI ⭐️
   </button>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path
-      fill="var(--bootcamp-color)"
-      fill-opacity="1"
-      d="M0,192L80,160C160,128,320,64,480,74.7C640,85,800,171,960,181.3C1120,192,1280,128,1360,96L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-    ></path>
-  </svg>
+  <DesignBottom />
 </template>
 
 <script>
 import InstructionCard from "@/components/InstructionCard.vue";
 import database from "@/api/database.js";
+import DesignTop from "@/components/DesignTop.vue";
+import DesignBottom from "@/components/DesignBottom.vue";
 
 export default {
   name: "Index",
-  components: { InstructionCard },
+  components: {
+    InstructionCard,
+    DesignTop,
+    DesignBottom,
+  },
 
   data: () => {
     return {
@@ -146,7 +140,7 @@ hr {
 
 .rankin-decl {
   margin: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 
 li {
