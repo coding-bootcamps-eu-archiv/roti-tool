@@ -12,6 +12,7 @@
     <a href="/static/impressum.html">Impressum</a>
     <br />
     <a href="/static/datenschutz.html">Datenschutzerklärung</a>
+    <p>Made with 💜 and brain</p>
   </footer>
 </template>
 
