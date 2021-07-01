@@ -50,7 +50,7 @@ export default {
 <style>
 @media screen and (min-width: 768px) {
   .member {
-    margin-top: 10px;
+    margin-top: 1.5rem;
 
     list-style-type: none;
     display: grid;
@@ -84,7 +84,7 @@ export default {
 }
 @media screen and (max-width: 768px) {
   .textContent {
-    margin: 1rem;
+    margin: 1.5rem;
     margin-left: 0;
   }
 }
