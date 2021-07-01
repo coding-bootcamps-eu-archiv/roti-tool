@@ -3,6 +3,8 @@ import Home from "../views/Index.vue";
 import Team from "../views/Team.vue";
 import New from "../views/NewRoti.vue";
 import Success from "../views/Success.vue";
+import Impressum from "../views/Impressum.vue";
+import Datenschutz from "../views/Datenschutz.vue";
 
 const routes = [
   {
@@ -29,6 +31,16 @@ const routes = [
     path: "/success",
     name: "Success",
     component: Success,
+  },
+  {
+    path: "/impressum",
+    name: "Impressum",
+    component: Impressum,
+  },
+  {
+    path: "/datenschutz",
+    name: "Datenschutz",
+    component: Datenschutz,
   },
 ];
 

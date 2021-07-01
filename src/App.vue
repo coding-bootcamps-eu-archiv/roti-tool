@@ -9,10 +9,10 @@
   </header>
   <router-view />
   <footer>
-    <a href="/static/impressum.html">Impressum</a>
+    <router-link to="/impressum">Impressum</router-link>
     <br />
-    <a href="/static/datenschutz.html">Datenschutzerklärung</a>
-    <p>Made with 💜 and brain</p>
+    <router-link to="/datenschutz">Datenschutz</router-link>
+    <p>Made with ❤️ and brain</p>
   </footer>
 </template>
 
