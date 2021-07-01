@@ -10,8 +10,9 @@
   <router-view />
   <footer>
     <p>Copyright</p>
-    <p>Impressum</p>
-    <p>Datenschutz</p>
+    <a href="/static/impressum.html">Impressum</a>
+    <br />
+    <a href="/static/datenschutz.html">Datenschutzerklärung</a>
   </footer>
 </template>
 
