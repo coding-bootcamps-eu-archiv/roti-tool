@@ -1,4 +1,5 @@
 <template>
+  <DesignTop />
   <div>
     <form class="login" @submit.prevent="loginFunction">
       <h2>Login Page 🔐</h2>
@@ -17,16 +18,28 @@
         type="password"
         placeholder="Passwort"
       />
-      <hr />
-      <button type="submit" @click="loginFunction">Login</button>
+      <br />
+      <br />
+      <button class="loginBtn" type="submit" @click="loginFunction">
+        Login
+      </button>
     </form>
   </div>
   <br />
   <br />
+  <DesignBottom />
 </template>
 
 <script>
+import DesignTop from "@/components/DesignTop.vue";
+import DesignBottom from "@/components/DesignBottom.vue";
+
 export default {
+  name: "Index",
+  components: {
+    DesignTop,
+    DesignBottom,
+  },
   data() {
     return {
       text: "",
@@ -47,4 +60,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.loginBtn {
+  padding: 0.5rem;
+  background-color: var(--bootcamp-color);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: var(--main-radius);
+}
+</style>

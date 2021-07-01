@@ -170,7 +170,7 @@ export default {
 * general styling
  */
 :root {
-  --main-radius: 5px;
+  --main-radius: 15px;
   --main-padding: 5px;
 }
 /**
@@ -229,7 +229,7 @@ export default {
 #submitBtn {
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
-  background-color: #6a1cc3;
+  background-color: var(--bootcamp-color);
   color: white;
   font-weight: bold;
 }
@@ -352,7 +352,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-  border: 0.6rem solid #6a1cc3;
+  border: 0.6rem solid var(--bootcamp-color);
 }
 
 /**

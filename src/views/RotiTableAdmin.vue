@@ -1,4 +1,5 @@
 <template>
+  <DesignTop />
   <header>
     <h2>Admin: Statistik</h2>
     <p>In diesem Bereich sind die Kommentare der Rotis zu sehen 📝</p>
@@ -53,6 +54,7 @@
       />
     </tbody>
   </table>
+  <DesignBottom />
 </template>
 
 <script>
@@ -60,12 +62,16 @@ import RotiListTeacher from "../components/RotiListTeacher.vue";
 import RotiListStudent from "../components/RotiListStudent.vue";
 import dataBase from "../api/database";
 import rotiHelper from "../components/rotiTableHelper.js";
+import DesignTop from "@/components/DesignTop.vue";
+import DesignBottom from "@/components/DesignBottom.vue";
 
 export default {
   name: "RotiTableAdmin",
   components: {
     RotiListStudent,
     RotiListTeacher,
+    DesignTop,
+    DesignBottom,
   },
 
   data() {

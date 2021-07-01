@@ -124,7 +124,7 @@ body {
   color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: var(--main-radius);
 }
 
 .instruction-container {

@@ -1,16 +1,17 @@
 <template>
+  <DesignTop />
   <header>
     <h2>Statistik</h2>
   </header>
-  <div>
+  <div class="filter">
     Filter nach Trainer:in:
     <input type="text" placeholder="Trainer" v-model="inputValueTrainer" />
   </div>
-  <div>
+  <div class="filter">
     Filter nach Thema:
     <input type="text" placeholder="Thema" v-model="inputValueThema" />
   </div>
-  <div>
+  <div class="filter">
     Filter nach Datum:
     <input type="text" placeholder="Datum" v-model="inputValueDatum" />
   </div>
@@ -52,6 +53,7 @@
       />
     </tbody>
   </table>
+  <DesignBottom />
 </template>
 
 <script>
@@ -59,12 +61,16 @@ import RotiListTeacher from "../components/RotiListTeacher.vue";
 import RotiListStudent from "../components/RotiListStudent.vue";
 import dataBase from "../api/database";
 import rotiHelper from "../components/rotiTableHelper.js";
+import DesignTop from "@/components/DesignTop.vue";
+import DesignBottom from "@/components/DesignBottom.vue";
 
 export default {
   name: "RotiTable",
   components: {
     RotiListStudent,
     RotiListTeacher,
+    DesignTop,
+    DesignBottom,
   },
 
   data() {
@@ -140,4 +146,26 @@ export default {
   },
 };
 </script>
-<style></style>
+
+<style>
+@media screen and (max-width: 470) {
+  .filter {
+    display: flex;
+    _grid-template-columns: 1fr;
+    flex-wrap: wrap;
+    _grid-gap: 1.5rem;
+    _margin-left: 1.5rem;
+    _margin-right: 1.5rem;
+    _text-align: right;
+  }
+}
+
+.filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: right;
+}
+</style>
