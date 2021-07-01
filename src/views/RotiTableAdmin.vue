@@ -27,14 +27,14 @@
     <p v-if="rotisWith5PointsPercent > 0">5: {{ rotisWith5PointsPercent }}%</p>
   </div>
   <table class="list">
-    <thead>
-      <tr v-if="filteredRotis.length > 0">
-        <th>Thema</th>
-        <th>Trainer:in</th>
-        <th>TeachingAssistent:in</th>
-        <th>ROTI</th>
-        <th v-if="teacher === true">ROTI Kommentar</th>
-        <th>Datum (ROTI abgegeben)</th>
+    <thead class="tablehead">
+      <tr class="rotiTable" v-if="filteredRotis.length > 0">
+        <th class="thema">Thema</th>
+        <th class="trainer">Trainer:in</th>
+        <th class="teachingAss">TeachingAssistent:in</th>
+        <th class="roti">ROTI</th>
+        <th class="comment" v-if="teacher === true">ROTI Kommentar</th>
+        <th class="date">Datum (ROTI abgegeben)</th>
       </tr>
     </thead>
     <tbody v-if="teacher === true">
@@ -45,7 +45,7 @@
       />
     </tbody>
 
-    <tbody v-if="teacher === false">
+    <tbody class="tablebody" v-if="teacher === false">
       <roti-list-student
         v-for="roti in filteredRotis"
         :key="roti.id"
@@ -74,7 +74,7 @@ export default {
       inputValueTrainer: "",
       inputValueThema: "",
       inputValueDatum: "",
-      teacher: false,
+      teacher: true,
     };
   },
   computed: {
@@ -141,4 +141,40 @@ export default {
   },
 };
 </script>
-<style></style>
+<style scoped>
+/**
+* Start of grid styling for table
+* issues to create styling for table body
+*
+@media only screen and (min-width: 550px) {
+  .list {
+    display: grid;
+    height: 40vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas:
+      "Tablehead"
+      "Tablebody";
+    grid-gap: 1rem;
+    font-family: "Inter", sans-serif;
+
+    margin: 1rem;
+    justify-items: center;
+  }
+  .tablehead {
+    grid-area: Tablehead;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16px;
+    justify-self: center;
+  }
+  .tablebody {
+    grid-area: Tablebody;
+    font-weight: 200;
+    text-transform: none;
+    font-size: 12px;
+    justify-self: center;
+  }
+}
+*/
+</style>
