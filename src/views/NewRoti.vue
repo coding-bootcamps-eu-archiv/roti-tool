@@ -1,4 +1,5 @@
 <template>
+  <DesignTop />
   <h2>Neuer ROTI Eintrag</h2>
   <div id="formContainer">
     <Form class="input-roti-form" id="rotiForm" @submit="onSubmit">
@@ -122,6 +123,7 @@
       </div>
     </Form>
   </div>
+  <DesignBottom />
 </template>
 
 <script>
@@ -132,6 +134,8 @@ import {
   teachingAssistents,
 } from "@/components/dropdownContent.js";
 import dataBase from "@/api/database.js";
+import DesignTop from "@/components/DesignTop.vue";
+import DesignBottom from "@/components/DesignBottom.vue";
 
 export default {
   name: "NewRoti",
@@ -139,6 +143,8 @@ export default {
     Form,
     Field,
     ErrorMessage,
+    DesignTop,
+    DesignBottom,
   },
   data: () => {
     return {
