@@ -9,7 +9,6 @@
   </header>
   <router-view />
   <footer>
-    <p>Copyright</p>
     <a href="/static/impressum.html">Impressum</a>
     <br />
     <a href="/static/datenschutz.html">Datenschutzerklärung</a>
