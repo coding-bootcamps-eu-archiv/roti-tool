@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import RotiListTeacherVue from "@/components/RotiListTeacher.vue";
 export default {
   data() {
     return {
@@ -34,13 +35,30 @@ export default {
     };
   },
   methods: {
-    loginFunction() {
-      let text = this.text;
-      let password = this.password;
-      if (password === "admin" && text === "admin") {
-        this.$router.push("/new");
-      }
+    methods: {
+      loginFunction() {
+        let text = this.text;
+        let password = this.password;
+        if (password === "admin" && text === "admin") {
+          this.$router.push({
+            path: "/table",
+            name: "RotiTable",
+            component: RotiListTeacherVue,
+            teacher: true,
+          });
+        }
+      },
     },
+    /**
+     * First version of function for login
+    loginFunction() {
+    let text = this.text;
+    let password = this.password;
+    if (password === "admin" && text === "admin") {
+    this.$router.push("/new");
+    }
+    },
+    */
   },
 };
 </script>
