@@ -24,7 +24,7 @@
     (Quelle:
     http://www.agile-ux.com/wp-content/uploads/2010/11/roti-grosjean-agileux.png)
   </p>
-  <ul>
+  <ul class="rankin-decl">
     <li>
       5: Exzellent/Hoher Wert – Der Nutzen der Veranstaltung ist viel mehr Wert
       als die dafür investierte Zeit 🤩
@@ -57,9 +57,11 @@
   <hr />
   <article class="instruction-container">
     <h2>Anleitung</h2>
+    <br />
     <p>
       Die Bedienung des ROTI Tools ist super leicht und erklärt sich von allein.
     </p>
+    <br />
     <div>
       <InstructionCard
         headline="Schritt 1"
@@ -113,11 +115,9 @@ export default {
 </script>
 
 <style>
-@media screen and (min-width: 915px) {
-  p {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
+p {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 body {
@@ -144,8 +144,13 @@ hr {
   background-color: var(--bootcamp-color);
 }
 
+.rankin-decl {
+  margin: 1.5rem;
+  text-align: center;
+}
+
 li {
-  list-style: none;
+  list-style-type: none;
 }
 
 .source {

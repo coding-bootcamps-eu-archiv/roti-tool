@@ -51,7 +51,7 @@ export default {
 @media screen and (min-width: 768px) {
   .member {
     margin-top: 10px;
-    _border: 1px solid black;
+
     list-style-type: none;
     display: grid;
     text-align: left;
@@ -62,13 +62,14 @@ export default {
   }
 }
 .member {
-  margin-top: 10px;
-  _border: 1px solid black;
+  margin: 1.5rem;
+
   display: grid;
   text-align: left;
-  _grid-gap: 20px;
+
   list-style-type: none;
 }
+
 .picture {
   height: 200px;
   max-width: 300px;
@@ -78,19 +79,19 @@ export default {
   margin-left: 0px;
 }
 .textContent {
-  _width: 350px;
   text-align: left;
-  margin: 15px;
-  margin-left: 0px;
+  margin: 1.5rem;
 }
 @media screen and (max-width: 768px) {
   .textContent {
-    width: 350px;
+    margin: 1rem;
+    margin-left: 0;
   }
 }
 .twitter {
   height: 20px;
   width: auto;
+  margin-top: 0.3rem;
 }
 
 .name {
