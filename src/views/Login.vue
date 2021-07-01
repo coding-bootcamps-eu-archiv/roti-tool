@@ -2,8 +2,8 @@
   <div>
     <form class="login" @submit.prevent="loginFunction">
       <h2>Login Page 🔐</h2>
-      <br />
 
+      <p>Login für den Admin Bereich mit erweiterter Statistik 📊</p>
       <label>Nutzername</label>
       <br />
       <input required v-model="text" type="text" placeholder="Nutzername" />
@@ -38,7 +38,9 @@ export default {
       let text = this.text;
       let password = this.password;
       if (password === "admin" && text === "admin") {
-        this.$router.push("/new");
+        this.$router.push("/admintable");
+      } else {
+        alert("🔒 Sappralott! Anmeldung fehlgeschlagen 🔒");
       }
     },
   },
