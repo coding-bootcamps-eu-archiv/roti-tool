@@ -58,6 +58,7 @@
 import RotiListTeacher from "../components/RotiListTeacher.vue";
 import RotiListStudent from "../components/RotiListStudent.vue";
 import dataBase from "../api/database";
+import rotiHelper from "../components/rotiTableHelper.js";
 
 export default {
   name: "RotiTable",
@@ -77,72 +78,44 @@ export default {
   },
   computed: {
     filteredRotis() {
-      return this.rotis.filter(
-        (roti) =>
-          roti.trainer.includes(this.inputValueTrainer) &&
-          roti.topic.includes(this.inputValueThema) &&
-          roti.sysDate.toDateString().includes(this.inputValueDatum)
+      let resultRotis = rotiHelper.filterByTrainer(
+        this.rotis,
+        this.inputValueTrainer
       );
+      resultRotis = rotiHelper.filterByTopic(resultRotis, this.inputValueThema);
+      resultRotis = rotiHelper.filterByDatum(resultRotis, this.inputValueDatum);
+      return resultRotis;
     },
-    rotisWith1Point() {
-      return this.rotis.filter(
-        (roti) =>
-          roti.ranking.includes("1") &&
-          roti.trainer.includes(this.inputValueTrainer) &&
-          roti.topic.includes(this.inputValueThema) &&
-          roti.sysDate.toDateString().includes(this.inputValueDatum)
-      );
-    },
+
     rotisWith1PointPercent() {
-      return (100 / this.filteredRotis.length) * this.rotisWith1Point.length;
-    },
-    rotisWith2Points() {
-      return this.rotis.filter(
-        (roti) =>
-          roti.ranking.includes("2") &&
-          roti.trainer.includes(this.inputValueTrainer) &&
-          roti.topic.includes(this.inputValueThema) &&
-          roti.sysDate.toDateString().includes(this.inputValueDatum)
+      let resultValue = this.filteredRotis.filter((roti) =>
+        roti.ranking.includes("1")
       );
+      return (100 / this.filteredRotis.length) * resultValue.length;
     },
     rotisWith2PointsPercent() {
-      return (100 / this.filteredRotis.length) * this.rotisWith2Points.length;
-    },
-    rotisWith3Points() {
-      return this.rotis.filter(
-        (roti) =>
-          roti.ranking.includes("3") &&
-          roti.trainer.includes(this.inputValueTrainer) &&
-          roti.topic.includes(this.inputValueThema) &&
-          roti.sysDate.toDateString().includes(this.inputValueDatum)
+      let resultValue = this.filteredRotis.filter((roti) =>
+        roti.ranking.includes("2")
       );
+      return (100 / this.filteredRotis.length) * resultValue.length;
     },
     rotisWith3PointsPercent() {
-      return (100 / this.filteredRotis.length) * this.rotisWith3Points.length;
-    },
-    rotisWith4Points() {
-      return this.rotis.filter(
-        (roti) =>
-          roti.ranking.includes("4") &&
-          roti.trainer.includes(this.inputValueTrainer) &&
-          roti.topic.includes(this.inputValueThema) &&
-          roti.sysDate.toDateString().includes(this.inputValueDatum)
+      let resultValue = this.filteredRotis.filter((roti) =>
+        roti.ranking.includes("3")
       );
+      return (100 / this.filteredRotis.length) * resultValue.length;
     },
     rotisWith4PointsPercent() {
-      return (100 / this.filteredRotis.length) * this.rotisWith4Points.length;
-    },
-    rotisWith5Points() {
-      return this.rotis.filter(
-        (roti) =>
-          roti.ranking.includes("5") &&
-          roti.trainer.includes(this.inputValueTrainer) &&
-          roti.topic.includes(this.inputValueThema) &&
-          roti.sysDate.toDateString().includes(this.inputValueDatum)
+      let resultValue = this.filteredRotis.filter((roti) =>
+        roti.ranking.includes("4")
       );
+      return (100 / this.filteredRotis.length) * resultValue.length;
     },
     rotisWith5PointsPercent() {
-      return (100 / this.filteredRotis.length) * this.rotisWith5Points.length;
+      let resultValue = this.filteredRotis.filter((roti) =>
+        roti.ranking.includes("5")
+      );
+      return (100 / this.filteredRotis.length) * resultValue.length;
     },
   },
 
@@ -152,7 +125,9 @@ export default {
       .then((response) => response.json())
       .then((rotis) =>
         rotis.sort(
-          (rotiLeft, rotiRight) => rotiLeft.sysDate + rotiRight.sysDate
+          (rotiLeft, rotiRight) =>
+            (rotiLeft.sysDate < rotiRight.sysDate) -
+            (rotiLeft.sysDate > rotiRight.sysDate)
         )
       )
       .then((rotis) => {
