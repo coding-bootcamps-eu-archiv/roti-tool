@@ -16,9 +16,9 @@
     haben:
   </p>
   <img
+    class="img-roti"
     src="/static/ROTIexplanation.png"
     alt="ROTI explanation"
-    style="width: 30%; height: auto"
   />
   <p class="source">
     (Quelle:
@@ -146,7 +146,7 @@ hr {
 
 .rankin-decl {
   margin: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 li {
@@ -159,5 +159,10 @@ li {
 
 button {
   border: none;
+}
+
+.img-roti {
+  width: 30%;
+  height: auto;
 }
 </style>

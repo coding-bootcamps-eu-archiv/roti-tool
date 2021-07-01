@@ -51,6 +51,6 @@ export default {
 </script>
 <style>
 p {
-  margin: 0 1.5rem;
+  margin: 1.5rem;
 }
 </style>
