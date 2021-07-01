@@ -126,7 +126,7 @@ import {
   trainers,
   teachingAssistents,
 } from "@/components/dropdownContent.js";
-
+import dataBase from "@/api/database.js";
 export default {
   name: "NewRoti",
   components: {
@@ -139,12 +139,14 @@ export default {
       topics,
       trainers,
       teachingAssistents,
+      dataBase,
     };
   },
   methods: {
     isRequired: (value) => (value ? true : "This field is required"),
     onSubmit(values) {
       alert(JSON.stringify(values, null, 2));
+      this.dataBase.createRoti(values, null, 2);
       this.$router.push("/Success");
     },
   },
@@ -155,45 +157,38 @@ export default {
 label {
   font-size: 2.3rem;
 }
-
 #textarea {
   width: 800px;
   height: 100px;
+  background-color: white;
 }
-
 .input-roti-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
 }
-
 .dropdown-items {
   justify-self: center;
   width: 30rem;
   height: 2rem;
 }
-
 .full-width {
   grid-column: 1 / 3;
   margin: auto 3rem;
 }
-
 #cars {
   justify-content: space-around;
 }
-
 .radio-btn {
   margin: 1.5rem;
   font-size: 2em;
   align-items: baseline;
 }
-
 input[type="radio"] {
   height: 2em;
   width: 2em;
   border: 0px;
 }
-
 button {
   padding: 1rem;
   background-color: #6a1cc3;
@@ -202,11 +197,9 @@ button {
   font-weight: bold;
   border-radius: 15px;
 }
-
 select:invalid {
   border: 2px dashed red;
 }
-
 select:valid {
   border: 2px solid black;
 }
