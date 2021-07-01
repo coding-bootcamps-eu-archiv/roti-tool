@@ -5,6 +5,7 @@ import New from "../views/NewRoti.vue";
 import Rotis from "../views/RotiTable.vue";
 import Login from "../views/Login.vue";
 import Success from "../views/Success.vue";
+import Analytics from "../views/Analytics.vue";
 
 const routes = [
   {
@@ -41,6 +42,11 @@ const routes = [
     path: "/success",
     name: "Success",
     component: Success,
+  },
+  {
+    path: "/analytics",
+    name: "Analytics",
+    component: Analytics,
   },
 ];
 
