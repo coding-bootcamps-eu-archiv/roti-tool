@@ -99,7 +99,6 @@ export default {
       );
       return (100 / this.filteredRotis.length) * resultValue.length;
     },
-
     rotisWith3PointsPercent() {
       let resultValue = this.filteredRotis.filter((roti) =>
         roti.ranking.includes("3")
