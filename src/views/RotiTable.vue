@@ -58,6 +58,7 @@
 import RotiListTeacher from "../components/RotiListTeacher.vue";
 import RotiListStudent from "../components/RotiListStudent.vue";
 import dataBase from "../api/database";
+import rotiHelper from "../components/rotiTableHelper.js";
 
 export default {
   name: "RotiTable",
@@ -77,13 +78,15 @@ export default {
   },
   computed: {
     filteredRotis() {
-      return this.rotis.filter(
-        (roti) =>
-          roti.trainer.includes(this.inputValueTrainer) &&
-          roti.topic.includes(this.inputValueThema) &&
-          roti.sysDate.toDateString().includes(this.inputValueDatum)
+      let resultRotis = rotiHelper.filterByTrainer(
+        this.rotis,
+        this.inputValueTrainer
       );
+      resultRotis = rotiHelper.filterByTopic(resultRotis, this.inputValueThema);
+      resultRotis = rotiHelper.filterByDatum(resultRotis, this.inputValueDatum);
+      return resultRotis;
     },
+
     rotisWith1Point() {
       return this.rotis.filter(
         (roti) =>

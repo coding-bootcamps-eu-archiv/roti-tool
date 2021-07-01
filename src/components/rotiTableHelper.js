@@ -6,6 +6,8 @@ export default {
     return rotis.filter((roti) => roti.topic.includes(topic));
   },
   filterByDatum: (rotis, sysDate) => {
-    return rotis.filter((roti) => roti.sysDate.includes(sysDate));
+    return rotis.filter((roti) =>
+      roti.sysDate.toDateString().includes(sysDate)
+    );
   },
 };
