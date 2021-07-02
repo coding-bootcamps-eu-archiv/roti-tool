@@ -1,5 +1,7 @@
 <template>
-  <canvas id="myChart" width="400" height="200"></canvas>
+  <div class="myChart">
+    <canvas id="myChart"></canvas>
+  </div>
 </template>
 
 <script>
@@ -55,8 +57,8 @@ export default {
                 label: "Ranking",
                 data: this.rankingArr,
                 fill: true,
-                borderColor: "rgba(255, 99, 132, 1)",
-                backgroundColor: "rgba(255, 99, 132, 0.5)",
+                borderColor: "rgba(106,28,195)",
+                backgroundColor: "rgba(106,28,195, 0.6)",
                 borderWidth: 2,
               },
             ],
@@ -67,3 +69,11 @@ export default {
   },
 };
 </script>
+
+<style>
+.myChart {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+}
+</style>
