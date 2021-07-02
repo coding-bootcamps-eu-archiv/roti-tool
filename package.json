@@ -12,10 +12,15 @@
     "server": "json-server --watch db.json"
   },
   "dependencies": {
+    "@vee-validate/rules": "^4.1.20",
+    "axios": "^0.21.1",
+    "chart.js": "^2.9.4",
     "core-js": "^3.8.3",
-    "vee-validate": "^4.4.5",
     "firebase": "^8.6.8",
+    "json-server": "^0.16.3",
+    "vee-validate": "^4.4.5",
     "vue": "^3.0.4",
+    "vue-chartjs": "^3.5.1",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {

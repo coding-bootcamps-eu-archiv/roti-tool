@@ -1,6 +1,6 @@
 export default {
   createRoti: (newRoti) => {
-    newRoti.sysDate = Date();
+    newRoti.sysDate = Date.now();
 
     fetch("http://localhost:3000/rotis", {
       method: "POST",
@@ -12,10 +12,6 @@ export default {
   },
 
   getRotis: () => {
-    fetch("http://localhost:3000/rotis")
-      .then((response) => response.json())
-      .then((rotiArray) => {
-        console.log(rotiArray);
-      });
+    return fetch("http://localhost:3000/rotis");
   },
 };

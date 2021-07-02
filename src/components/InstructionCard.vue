@@ -26,9 +26,9 @@ export default {
     display: grid;
     text-align: left;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 20px;
-    margin-left: 15rem;
-    margin-right: 15rem;
+    grid-gap: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
   }
 }
 

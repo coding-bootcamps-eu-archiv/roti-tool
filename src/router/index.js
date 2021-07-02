@@ -2,9 +2,15 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../views/Index.vue";
 import Team from "../views/Team.vue";
 import New from "../views/NewRoti.vue";
+import Rotis from "../views/RotiTable.vue";
+import Login from "../views/Login.vue";
 import Success from "../views/Success.vue";
 import Impressum from "../views/Impressum.vue";
 import Datenschutz from "../views/Datenschutz.vue";
+
+import Analytics from "../views/Analytics.vue";
+
+import Admin from "../views/RotiTableAdmin.vue";
 
 const routes = [
   {
@@ -28,6 +34,21 @@ const routes = [
     component: New,
   },
   {
+    path: "/table",
+    name: "RotiList",
+    component: Rotis,
+  },
+  {
+    path: "/admintable",
+    name: "AdminTable",
+    component: Admin,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+  },
+  {
     path: "/success",
     name: "Success",
     component: Success,
@@ -41,6 +62,11 @@ const routes = [
     path: "/datenschutz",
     name: "Datenschutz",
     component: Datenschutz,
+  },
+  {
+    path: "/analytics",
+    name: "Analytics",
+    component: Analytics,
   },
 ];
 

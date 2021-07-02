@@ -7,6 +7,11 @@ export const trainers = [
     id: 2,
     name: "Robin",
   },
+
+  {
+    id: 3,
+    name: "Keiner",
+  },
 ];
 
 export const teachingAssistents = [
@@ -21,6 +26,10 @@ export const teachingAssistents = [
   {
     id: 3,
     name: "Ferdinand",
+  },
+  {
+    id: 4,
+    name: "Keiner",
   },
 ];
 
