@@ -5,11 +5,12 @@ import New from "../views/NewRoti.vue";
 import Rotis from "../views/RotiTable.vue";
 import Login from "../views/Login.vue";
 import Success from "../views/Success.vue";
+import Impressum from "../views/Impressum.vue";
+import Datenschutz from "../views/Datenschutz.vue";
 
 import Analytics from "../views/Analytics.vue";
 
 import Admin from "../views/RotiTableAdmin.vue";
-
 
 const routes = [
   {
@@ -51,6 +52,16 @@ const routes = [
     path: "/success",
     name: "Success",
     component: Success,
+  },
+  {
+    path: "/impressum",
+    name: "Impressum",
+    component: Impressum,
+  },
+  {
+    path: "/datenschutz",
+    name: "Datenschutz",
+    component: Datenschutz,
   },
   {
     path: "/analytics",

@@ -15,7 +15,12 @@
     <h1>ROTI TOOL</h1>
   </header>
   <router-view />
-  <footer>Copyright XYZ</footer>
+  <footer>
+    <router-link to="/impressum">Impressum</router-link>
+    <br />
+    <router-link to="/datenschutz">Datenschutzerklärung</router-link>
+    <p>Made with ❤️ and brain</p>
+  </footer>
 </template>
 
 <style lang="scss">
