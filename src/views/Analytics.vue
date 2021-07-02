@@ -1,24 +1,18 @@
 <template>
   <div id="app">
-    <ChartSet class="app" />
+    <Charts />
   </div>
 </template>
 
 <script>
-import ChartSet from "@/components/ChartSet.vue";
+import Charts from "@/components/Charts.vue";
 
 export default {
   name: "App",
   components: {
-    ChartSet,
+    Charts,
   },
 };
 </script>
 
-<style>
-.app {
-  height: 500px;
-  width: 500px;
-  margin-left: 35%;
-}
-</style>
+<style></style>
