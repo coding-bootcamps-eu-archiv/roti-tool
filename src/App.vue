@@ -11,7 +11,7 @@
   <footer>
     <router-link to="/impressum">Impressum</router-link>
     <br />
-    <router-link to="/datenschutz">Datenschutz</router-link>
+    <router-link to="/datenschutz">Datenschutzerklärung</router-link>
     <p>Made with ❤️ and brain</p>
   </footer>
 </template>
