@@ -1,7 +1,8 @@
 <template>
   <DesignTop />
   <header>
-    <h2>Statistik</h2>
+    <h2>Admin: Statistik</h2>
+    <p>In diesem Bereich sind die Kommentare der Rotis zu sehen 📝</p>
   </header>
   <div class="filter" id="textTrainer">
     Filter nach Trainer:in:
@@ -114,7 +115,7 @@ import DesignTop from "@/components/DesignTop.vue";
 import DesignBottom from "@/components/DesignBottom.vue";
 
 export default {
-  name: "RotiTable",
+  name: "RotiTableAdmin",
   components: {
     RotiListStudent,
     RotiListTeacher,
@@ -128,7 +129,7 @@ export default {
       inputValueTrainer: "",
       inputValueThema: "",
       inputValueDatum: "",
-      teacher: false,
+      teacher: true,
     };
   },
   computed: {
@@ -195,8 +196,7 @@ export default {
   },
 };
 </script>
-
-<style>
+<style scoped>
 @media screen and (max-width: 470) {
   .filter {
     display: flex;
