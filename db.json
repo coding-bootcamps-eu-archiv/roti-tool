@@ -1,33 +1,58 @@
 {
   "rotis": [
     {
-      "rotiObj": {
-        "thema": "HTML",
-        "trainer": "nico",
-        "teachingAssistent": "David",
-        "rotiValue": "4",
-        "rotiText": "alles super"
-      },
-      "sysDate": "Mon Jun 28 2021 14:20:36 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 1
+      "topic": "HTML",
+      "trainer": "Nico",
+      "teachingAssistent": "Michael",
+      "ranking": "4",
+      "textarea": ".dfna.dskfnlk<fmn.akbvnafdmssdk.fnad.fkjndsal-kdmf.na.fkjsdk",
+      "sysDate": 1625053332015,
+      "id": 8
     },
     {
-      "thema": "HTML",
-      "trainer": "nico",
-      "teachingAssistent": "David",
-      "rotiValue": "4",
-      "rotiText": "alles super",
-      "sysDate": "Mon Jun 28 2021 14:25:44 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 2
+      "topic": "JS",
+      "trainer": "Robin",
+      "teachingAssistent": "Michael",
+      "ranking": "2",
+      "textarea": "dfsdfdsfsfdsffsdfsdfd",
+      "sysDate": 1615053332015,
+      "id": 7
     },
     {
-      "thema": "HTML",
-      "trainer": "nico",
+      "topic": "JS",
+      "trainer": "Nico",
+      "teachingAssistent": "Michael",
+      "ranking": "4",
+      "textarea": "bndfnds.dfn.nyfnf<s.ldsfnk.kfjn.\n",
+      "sysDate": 1625060967759,
+      "id": 9
+    },
+    {
+      "topic": "VUE",
+      "trainer": "Nico",
       "teachingAssistent": "David",
-      "rotiValue": "4",
-      "rotiText": "alles super",
-      "sysDate": "Mon Jun 28 2021 14:26:12 GMT+0200 (Mitteleuropäische Sommerzeit)",
-      "id": 3
+      "ranking": "5",
+      "textarea": "sdadadasdasdasdasda",
+      "sysDate": 1625061152402,
+      "id": 10
+    },
+    {
+      "topic": "CSS",
+      "trainer": "Robin",
+      "teachingAssistent": "Michael",
+      "ranking": "3",
+      "textarea": "hallo",
+      "sysDate": 1625232095791,
+      "id": 11
+    },
+    {
+      "topic": "CSS",
+      "trainer": "Nico",
+      "teachingAssistent": "Michael",
+      "ranking": "5",
+      "textarea": "Yeay",
+      "sysDate": 1625232145180,
+      "id": 12
     }
   ]
 }
