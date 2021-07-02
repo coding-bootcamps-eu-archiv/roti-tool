@@ -9,7 +9,7 @@ export default {
   name: "Chart",
   data() {
     return {
-      topicArr: [],
+      sysDateArr: [],
       dataArr: [],
       teacherArr: [],
       rankingArr: [],
@@ -37,7 +37,7 @@ export default {
       .then((rotis) => (this.dataArr = rotis))
       .then(() => {
         this.dataArr.forEach((element) => {
-          this.topicArr.push(element.sysDate);
+          this.sysDateArr.push(element.sysDate);
           this.rankingArr.push(element.ranking);
           this.teacherArr.push(element.trainer);
         });
@@ -48,16 +48,16 @@ export default {
         const myChart = new Chart(ctx, {
           type: "line",
           data: {
-            labels: this.topicArr,
+            labels: this.sysDateArr,
 
             datasets: [
               {
                 label: "Ranking",
                 data: this.rankingArr,
-                fill: false,
+                fill: true,
                 borderColor: "rgba(255, 99, 132, 1)",
                 backgroundColor: "rgba(255, 99, 132, 0.5)",
-                borderWidth: 1,
+                borderWidth: 2,
               },
             ],
           },
