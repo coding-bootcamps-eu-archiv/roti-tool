@@ -2,7 +2,7 @@
   <DesignTop />
 
   <header class="team">
-    <h2>Wer hat das ROTI Tool gebaut?</h2>
+    <h2 class="h-wer">Wer hat das ROTI Tool gebaut?</h2>
   </header>
   <p>
     Das ROTI Tool (ROTI = Return On Time Invested) ist das Abschlussprojekt
@@ -71,5 +71,10 @@ export default {
 p {
   margin-left: 3.5rem;
   margin-right: 3.5rem;
+}
+
+.h-wer {
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 </style>
