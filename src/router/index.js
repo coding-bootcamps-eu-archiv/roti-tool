@@ -5,7 +5,11 @@ import New from "../views/NewRoti.vue";
 import Rotis from "../views/RotiTable.vue";
 import Login from "../views/Login.vue";
 import Success from "../views/Success.vue";
+
 import Analytics from "../views/Analytics.vue";
+
+import Admin from "../views/RotiTableAdmin.vue";
+
 
 const routes = [
   {
@@ -32,6 +36,11 @@ const routes = [
     path: "/table",
     name: "RotiList",
     component: Rotis,
+  },
+  {
+    path: "/admintable",
+    name: "AdminTable",
+    component: Admin,
   },
   {
     path: "/login",

@@ -1,4 +1,5 @@
 <template>
+  <DesignTop />
   <h2>Neuer ROTI Eintrag</h2>
   <div id="formContainer">
     <Form class="input-roti-form" id="rotiForm" @submit="onSubmit">
@@ -122,6 +123,7 @@
       </div>
     </Form>
   </div>
+  <DesignBottom />
 </template>
 
 <script>
@@ -132,6 +134,8 @@ import {
   teachingAssistents,
 } from "@/components/dropdownContent.js";
 import dataBase from "@/api/database.js";
+import DesignTop from "@/components/DesignTop.vue";
+import DesignBottom from "@/components/DesignBottom.vue";
 
 export default {
   name: "NewRoti",
@@ -139,6 +143,8 @@ export default {
     Form,
     Field,
     ErrorMessage,
+    DesignTop,
+    DesignBottom,
   },
   data: () => {
     return {
@@ -164,7 +170,7 @@ export default {
 * general styling
  */
 :root {
-  --main-radius: 5px;
+  --main-radius: 15px;
   --main-padding: 5px;
 }
 /**
@@ -223,7 +229,7 @@ export default {
 #submitBtn {
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
-  background-color: #6a1cc3;
+  background-color: var(--bootcamp-color);
   color: white;
   font-weight: bold;
 }
@@ -346,7 +352,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-  border: 0.6rem solid #6a1cc3;
+  border: 0.6rem solid var(--bootcamp-color);
 }
 
 /**
