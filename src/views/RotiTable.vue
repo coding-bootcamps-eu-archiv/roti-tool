@@ -236,8 +236,8 @@ export default {
 }
 
 .percentBlock {
-  display: block;
-  justify-content: center;
-  align-items: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 1.5rem;
 }
 </style>

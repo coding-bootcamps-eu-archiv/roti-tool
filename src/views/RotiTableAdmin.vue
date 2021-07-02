@@ -36,7 +36,7 @@
   <p></p>
   Ergebnisse: {{ filteredRotis.length }}
 
-  <div v-if="filteredRotis.length > 0">
+  <div class="percentBlock" v-if="filteredRotis.length > 0">
     Roti Verteilung in Prozent:
     <p
       class="percentBars"
@@ -233,5 +233,11 @@ export default {
 
 .percentBars {
   width: 300px;
+}
+
+.percentBlock {
+  width: 300px;
+  margin: auto;
+  margin-top: 1.5rem;
 }
 </style>
