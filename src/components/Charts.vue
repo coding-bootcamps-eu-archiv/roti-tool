@@ -1,6 +1,6 @@
 <template>
   <h2>Grafische Darstellung</h2>
-  <div class="myChart">
+  <div class="chart-container">
     <canvas id="myChart"></canvas>
   </div>
 </template>
@@ -72,7 +72,7 @@ export default {
 </script>
 
 <style>
-.myChart {
+.chart-container {
   width: 500px;
   height: 300px;
   margin: 0 auto;
