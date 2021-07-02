@@ -30,17 +30,51 @@
       v-model="inputValueDatum"
     />
   </div>
+  <br />
+  <hr />
   <p></p>
   Ergebnisse: {{ filteredRotis.length }}
 
-  <div v-if="filteredRotis.length > 0">
+  <div class="percentBlock" v-if="filteredRotis.length > 0">
     Roti Verteilung in Prozent:
-    <p v-if="rotisWith1PointPercent > 0">1: {{ rotisWith1PointPercent }}%</p>
-    <p v-if="rotisWith2PointsPercent > 0">2: {{ rotisWith2PointsPercent }}%</p>
-    <p v-if="rotisWith3PointsPercent > 0">3: {{ rotisWith3PointsPercent }}%</p>
-    <p v-if="rotisWith4PointsPercent > 0">4: {{ rotisWith4PointsPercent }}%</p>
-    <p v-if="rotisWith5PointsPercent > 0">5: {{ rotisWith5PointsPercent }}%</p>
+    <p
+      class="percentBars"
+      :style="{ borderLeft: rotisWith1PointPercent + 'px solid grey' }"
+      v-if="rotisWith1PointPercent > 0"
+    >
+      1: {{ rotisWith1PointPercent }}%
+    </p>
+    <p
+      class="percentBars"
+      :style="{ borderLeft: rotisWith2PointsPercent + 'px solid grey' }"
+      v-if="rotisWith2PointsPercent > 0"
+    >
+      2: {{ rotisWith2PointsPercent }}%
+    </p>
+    <p
+      class="percentBars"
+      :style="{ borderLeft: rotisWith3PointsPercent + 'px solid grey' }"
+      v-if="rotisWith3PointsPercent > 0"
+    >
+      3: {{ rotisWith3PointsPercent }}%
+    </p>
+    <p
+      class="percentBars"
+      :style="{ borderLeft: rotisWith4PointsPercent + 'px solid grey' }"
+      v-if="rotisWith4PointsPercent > 0"
+    >
+      4: {{ rotisWith4PointsPercent }}%
+    </p>
+    <p
+      class="percentBars"
+      :style="{ borderLeft: rotisWith5PointsPercent + 'px solid grey' }"
+      v-if="rotisWith5PointsPercent > 0"
+    >
+      5: {{ rotisWith5PointsPercent }}%
+    </p>
   </div>
+  <br />
+  <hr />
   <table class="list">
     <thead class="tablehead">
       <tr class="rotiTable" v-if="filteredRotis.length > 0">
@@ -195,5 +229,15 @@ export default {
   width: 90%;
   margin-top: 2rem;
   margin-bottom: 4rem;
+}
+
+.percentBars {
+  width: 300px;
+}
+
+.percentBlock {
+  width: 300px;
+  margin: auto;
+  margin-top: 1.5rem;
 }
 </style>
