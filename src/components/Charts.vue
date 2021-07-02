@@ -1,4 +1,5 @@
 <template>
+  <h2>Grafische Darstellung</h2>
   <div class="myChart">
     <canvas id="myChart"></canvas>
   </div>
